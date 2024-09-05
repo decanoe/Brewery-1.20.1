@@ -42,11 +42,6 @@ public class BrewingRecipeRegistryMixin {
 		cir.setReturnValue(ModPotionUtils.push_ingredient(cir.getReturnValue(), ingredient.getItem()));
 
 		if (has_changed) {  // to not interfer with vanilla brewing
-			if (cir.getReturnValue().getItem() == input.getItem()) return;
-
-			ItemStack output = cir.getReturnValue();
-			output.setNbt(input.getNbt());
-			cir.setReturnValue(ModPotionUtils.push_ingredient(output, ingredient.getItem()));
 			return;
 		}
 		
