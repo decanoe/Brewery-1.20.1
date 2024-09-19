@@ -85,13 +85,13 @@ public class ModPotionUtils {
         public static ItemStack turn_to_base(ItemStack water_bottle, ItemStack ingredient) {
             if (ingredient.isIn(Ingredients.ROCKY_BASE_INGREDIENT))
                 water_bottle = PotionUtil.setPotion(water_bottle, ModPotionUtils.PotionBases.ROCKY_BASE_POTION);
-            if (ingredient.isIn(Ingredients.STEW_BASE_INGREDIENT))
+            else if (ingredient.isIn(Ingredients.STEW_BASE_INGREDIENT))
                 water_bottle = PotionUtil.setPotion(water_bottle, ModPotionUtils.PotionBases.STEW_BASE_POTION);
-            if (ingredient.isIn(Ingredients.THICK_BASE_INGREDIENT))
+            else if (ingredient.isIn(Ingredients.THICK_BASE_INGREDIENT))
                 water_bottle = PotionUtil.setPotion(water_bottle, Potions.THICK);
-            if (ingredient.isIn(Ingredients.MUNDANE_BASE_INGREDIENT))
+            else if (ingredient.isIn(Ingredients.MUNDANE_BASE_INGREDIENT))
                 water_bottle = PotionUtil.setPotion(water_bottle, Potions.MUNDANE);
-            if (ingredient.isIn(Ingredients.AWKWARD_BASE_INGREDIENT))
+            else if (ingredient.isIn(Ingredients.AWKWARD_BASE_INGREDIENT))
                 water_bottle = PotionUtil.setPotion(water_bottle, Potions.AWKWARD);
             else
                 return ModPotionUtils.make_failed(water_bottle);
