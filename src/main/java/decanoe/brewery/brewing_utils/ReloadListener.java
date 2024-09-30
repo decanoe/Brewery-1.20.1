@@ -95,6 +95,10 @@ public class ReloadListener implements SimpleSynchronousResourceReloadListener {
         return Double.valueOf(toStr(o)).intValue();
     }
 
+    public static float toFlt(Object o) {
+        return Double.valueOf(toStr(o)).floatValue();
+    }
+
     public static List<IngredientType> parseEffects(Map<String, ?> json) {
         List<Map<String, ?>> list;
         try {
@@ -141,7 +145,7 @@ public class ReloadListener implements SimpleSynchronousResourceReloadListener {
 
             case "duration" -> {
                 if (json.containsKey("multiplier"))
-                    return new IngredientType.IngredientDuration(toInt(json.get("multiplier")));
+                    return new IngredientType.IngredientDuration(toFlt(json.get("multiplier")));
                 return new IngredientType.IngredientDuration();
             }
 
