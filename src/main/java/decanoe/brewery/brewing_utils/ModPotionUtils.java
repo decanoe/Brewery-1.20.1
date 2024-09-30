@@ -221,6 +221,7 @@ public class ModPotionUtils {
             register(Items.HONEY_BLOCK              , PotionBases.STEW_BASE_POTION, new IngredientEffect(StatusEffects.INSTANT_HEALTH, 1, 1));
             register(Items.HONEY_BOTTLE             , PotionBases.STEW_BASE_POTION, new IngredientEffect(StatusEffects.INSTANT_HEALTH, 1, 0));
 
+            // TODO en data jusque là
             // #endregion
             //#region FLOWER
             register(Items.ALLIUM,              new IngredientEffect(StatusEffects.FIRE_RESISTANCE, getDuration(4)));
