@@ -84,6 +84,8 @@ public class ReloadListener implements SimpleSynchronousResourceReloadListener {
                 Brewery.LOGGER.info("Error while loading ingredient : " + entry.getKey().toString(), e);
             }
         }
+
+        ModPotionUtils.Ingredients.printInfos();
     }
 
     public static String toStr(Object o) {

@@ -1,10 +1,7 @@
 package decanoe.brewery.brewing_utils;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashMap;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.List;
 
 import decanoe.brewery.Brewery;
 import decanoe.brewery.brewing_utils.IngredientType.*;
@@ -847,10 +844,10 @@ public class ModPotionUtils {
         }
 
         public static void printInfos() {
-            HashMap<Potion, Integer> nb_ingredients = new HashMap<Potion, Integer>();
-            HashMap<Potion, HashMap<StatusEffect, Integer>> effects = new HashMap<Potion, HashMap<StatusEffect, Integer>>();
+            Map<Potion, Integer> nb_ingredients = new HashMap<>();
+            Map<Potion, HashMap<StatusEffect, Integer>> effects = new HashMap<>();
 
-            HashMap<StatusEffect, Integer> default_effects = new HashMap<StatusEffect, Integer>();
+            Map<StatusEffect, Integer> default_effects = new HashMap<>();
             int nb_amplifier = 0, default_max_duration = 1;
 
             for (PotionIngredientMap map : ingredient_map.values()) {
@@ -870,7 +867,7 @@ public class ModPotionUtils {
                     nb_ingredients.put(set.getKey(), nb_ingredients.getOrDefault(set.getKey(), 0) + 1);
 
                     for (IngredientType i : set.getValue()) {
-                        effects.putIfAbsent(set.getKey(), new HashMap<StatusEffect, Integer>());
+                        effects.putIfAbsent(set.getKey(), new HashMap<>());
 
                         if (i instanceof IngredientEffect) {
                             effects.get(set.getKey()).put(((IngredientEffect)i).effect, effects.get(set.getKey()).getOrDefault(((IngredientEffect)i).effect, 0) + 1);
@@ -881,7 +878,7 @@ public class ModPotionUtils {
 
             Brewery.LOGGER.info("nb ingredients:");
             Brewery.LOGGER.info("- default potion: \t" + ingredient_map.size());
-            ArrayList<Entry<Potion, Integer>> entries = new ArrayList<>(nb_ingredients.entrySet());
+            List<Entry<Potion, Integer>> entries = new ArrayList<>(nb_ingredients.entrySet());
             entries.sort(Comparator.comparing(Entry<Potion, Integer>::getValue).reversed());
             for (Entry<Potion, Integer> set : entries) {
                 Brewery.LOGGER.info("- " + set.getKey().finishTranslationKey("") + ": \t" + set.getValue());
@@ -890,7 +887,7 @@ public class ModPotionUtils {
             Brewery.LOGGER.info("");
             Brewery.LOGGER.info("nb ingredients by effect:");
             Brewery.LOGGER.info("- default potion (" + default_effects.size() + "):");
-            ArrayList<Entry<StatusEffect, Integer>> entries2 = new ArrayList<>(default_effects.entrySet());
+            List<Entry<StatusEffect, Integer>> entries2 = new ArrayList<>(default_effects.entrySet());
             entries2.sort(Comparator.comparing(Entry<StatusEffect, Integer>::getValue).reversed());
             for (Entry<StatusEffect, Integer> counts : entries2) {
                 Brewery.LOGGER.info("\t- " + counts.getKey().getTranslationKey() + ": \t" + counts.getValue());
