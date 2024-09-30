@@ -2,6 +2,11 @@
   "item": "minecraft:dirt",
   "base": "brewery:awkward",
   "effects": [
-
+    {
+      "type": "duration_infinite"
+    },
+    {
+      "type": "cure"
+    }
   ]
 }

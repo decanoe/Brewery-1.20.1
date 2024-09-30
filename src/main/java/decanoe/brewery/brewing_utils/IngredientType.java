@@ -51,7 +51,7 @@ public class IngredientType {
         public int color; // 0xAARRGGBB
         
         public IngredientColor(int r, int g, int b) {
-            this.color = b + (g + r * 256)* 256;
+            this.color = b + (g + r * 256) * 256;
         }
         public IngredientColor(int color) {
             this.color = color;

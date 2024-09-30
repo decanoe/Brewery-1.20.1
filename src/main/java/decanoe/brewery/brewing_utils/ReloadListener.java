@@ -1,6 +1,7 @@
 package decanoe.brewery.brewing_utils;
 
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -91,6 +92,78 @@ public class ReloadListener implements SimpleSynchronousResourceReloadListener {
     }
 
     public static List<IngredientType> parseEffects(Map<String, ?> json) {
-        return List.of(new IngredientType.IngredientEffect(StatusEffects.BAD_OMEN));
+        List<Map<String, ?>> list;
+        try {
+            list = (List<Map<String, ?>>) json.get("effects");
+        } catch (Exception e) {
+            Brewery.LOGGER.info("Error while parsing effects");
+            return List.of();
+        }
+
+        List<IngredientType> effects = new ArrayList<>();
+        for (Map<String, ?> e : list) {
+            IngredientType ingredientType = parseEffect(e);
+            if (ingredientType != null) effects.add(ingredientType);
+        }
+
+        return effects;
+    }
+
+    public static IngredientType parseEffect(Map<String, ?> json) {
+        if (!json.containsKey("type")) return null;
+
+        switch (str(json.get("type"))) {
+            case "effect" -> {
+                return null;
+            }
+
+            case "color" -> {
+                return null;
+            }
+
+            case "duration" -> {
+                return null;
+            }
+
+            case "duration_infinite" -> {
+                return new IngredientType.IngredientInfinite();
+            }
+
+            case "amplifier" -> {
+                return null;
+            }
+
+            case "corruption" -> {
+                return new IngredientType.IngredientCorruption();
+            }
+
+            case "alteration" -> {
+                return new IngredientType.IngredientAlteration();
+            }
+
+            case "cure" -> {
+                return new IngredientType.IngredientCure();
+            }
+
+            case "cure_invert" -> {
+                return new IngredientType.IngredientInvertCure();
+            }
+
+            case "hide" -> {
+                return new IngredientType.IngredientHideEffect();
+            }
+
+            case "show" -> {
+                return new IngredientType.IngredientShowRecipe();
+            }
+
+            case "enchantment_glint" -> {
+                return new IngredientType.IngredientGlint();
+            }
+
+            default -> {
+                return null;
+            }
+        }
     }
 }
