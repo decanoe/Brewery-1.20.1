@@ -1,0 +1,8 @@
+{
+  "item": "minecraft:name_tag",
+  "effects": [
+    {
+      "type": "show"
+    }
+  ]
+}

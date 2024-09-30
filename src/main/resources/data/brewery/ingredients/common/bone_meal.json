@@ -1,0 +1,8 @@
+{
+  "item": "minecraft:bone_meal",
+  "effects": [
+    {
+      "type": "alteration"
+    }
+  ]
+}

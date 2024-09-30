@@ -1,0 +1,8 @@
+{
+  "item": "minecraft:paper",
+  "effects": [
+    {
+      "type": "show"
+    }
+  ]
+}

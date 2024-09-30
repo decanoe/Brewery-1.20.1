@@ -1,0 +1,9 @@
+{
+  "item": "minecraft:clock",
+  "effects": [
+    {
+      "type": "duration",
+      "multiplier": 2
+    }
+  ]
+}

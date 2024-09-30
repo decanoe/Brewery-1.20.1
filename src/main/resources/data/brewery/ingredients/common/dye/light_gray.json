@@ -1,0 +1,9 @@
+{
+  "item": "minecraft:light_gray_dye",
+  "effects": [
+    {
+      "type": "color",
+      "color": "#7d7d73"
+    }
+  ]
+}

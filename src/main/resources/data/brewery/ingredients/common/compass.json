@@ -1,0 +1,8 @@
+{
+  "item": "minecraft:compass",
+  "effects": [
+    {
+      "type": "amplifier"
+    }
+  ]
+}

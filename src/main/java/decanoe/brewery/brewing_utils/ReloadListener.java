@@ -10,6 +10,7 @@ import decanoe.brewery.Brewery;
 import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.Potions;
 import net.minecraft.registry.Registries;
@@ -51,15 +52,15 @@ public class ReloadListener implements SimpleSynchronousResourceReloadListener {
                 String content = new String(resource.getInputStream().readAllBytes());
                 Map<String, ?> json = new Gson().fromJson(content, Map.class);
 
-                if (json == null || !json.containsKey("item") || !json.containsKey("base") || !json.containsKey("effects")) {
+                if (json == null || !json.containsKey("item") || !json.containsKey("effects")) {
                     Brewery.LOGGER.info("Error while loading ingredient : " + entry.getKey().toString());
-                    return;
+                    continue;
                 }
 
                 Item item = Registries.ITEM.get(new Identifier(toStr(json.get("item"))));
-                if (item == null) {
+                if (item == Items.AIR) {
                     Brewery.LOGGER.info("Error while loading ingredient, item doesn't exist : " + json.get("item"));
-                    return;
+                    continue;
                 }
 
                 Potion base = switch (toStr(json.get("base"))) {
@@ -70,15 +71,13 @@ public class ReloadListener implements SimpleSynchronousResourceReloadListener {
                     case "thick" -> Potions.THICK;
                     default -> null;
                 };
-                if (base == null) {
-                    Brewery.LOGGER.info("Error while loading ingredient, base doesn't exist : " + json.get("base"));
-                    return;
-                }
 
                 List<IngredientType> effects = parseEffects(json);
-                Brewery.LOGGER.info(effects + "");
 
-                ModPotionUtils.Ingredients.register(item, base, effects);
+                if (base == null)
+                    ModPotionUtils.Ingredients.register(item, effects);
+                else
+                    ModPotionUtils.Ingredients.register(item, base, effects);
 
             } catch (Exception e) {
                 Brewery.LOGGER.info("Error while loading ingredient : " + entry.getKey().toString(), e);

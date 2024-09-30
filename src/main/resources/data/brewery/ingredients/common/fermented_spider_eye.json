@@ -1,0 +1,8 @@
+{
+  "item": "minecraft:fermented_spider_eye",
+  "effects": [
+    {
+      "type": "corruption"
+    }
+  ]
+}

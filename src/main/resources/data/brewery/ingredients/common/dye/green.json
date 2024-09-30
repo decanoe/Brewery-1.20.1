@@ -1,0 +1,9 @@
+{
+  "item": "minecraft:green_dye",
+  "effects": [
+    {
+      "type": "color",
+      "color": "#495b24"
+    }
+  ]
+}

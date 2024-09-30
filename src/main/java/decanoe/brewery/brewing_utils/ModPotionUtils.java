@@ -156,6 +156,7 @@ public class ModPotionUtils {
             register(Items.RED_DYE, new IngredientColor(0xff8e2121));
             register(Items.BLACK_DYE, new IngredientColor(0xff080a0f));
         }
+
         private static void registerUniversalModifier() {
             register(Items.REDSTONE, new IngredientDuration(1.25f));
             register(Items.COMPASS, new IngredientDuration(2));
@@ -830,14 +831,14 @@ public class ModPotionUtils {
         private static void registerIngredients() {
             BrewingRecipeRegistry.registerItemRecipe(Items.SPLASH_POTION, Items.CHORUS_FLOWER, Items.LINGERING_POTION);
 
-            registerDyes();
-            registerDefault();
-            registerUniversalModifier();
-            registerStewIngredients();
-            registerRockyIngredients();
-            registerElixirIngredients();
-            registerAwkwardIngredients();
-            registerMundaneIngredients();
+            //registerDyes();
+            //registerDefault();
+            //registerUniversalModifier();
+            //registerStewIngredients();
+            //registerRockyIngredients();
+            //registerElixirIngredients();
+            //registerAwkwardIngredients();
+            //registerMundaneIngredients();
 
             Brewery.LOGGER.info(ingredient_map.size() + " ingredients registered, have fun !");
             printInfos();

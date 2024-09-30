@@ -1,0 +1,9 @@
+{
+  "item": "minecraft:red_dye",
+  "effects": [
+    {
+      "type": "color",
+      "color": "#373a3e"
+    }
+  ]
+}
