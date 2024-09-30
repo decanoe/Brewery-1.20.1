@@ -1,6 +1,6 @@
 package decanoe.brewery;
 
-import decanoe.brewery.brewing_utils.DataLoader;
+import decanoe.brewery.brewing_utils.ReloadListener;
 import decanoe.brewery.brewing_utils.ModPotionUtils;
 
 import net.fabricmc.api.ModInitializer;
@@ -26,8 +26,8 @@ public class Brewery implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		ModPotionUtils.register_potions();
-		ResourceManagerHelper.get(ResourceType.SERVER_DATA).registerReloadListener(new DataLoader());
+		ModPotionUtils.registerPotions();
+		ResourceManagerHelper.get(ResourceType.SERVER_DATA).registerReloadListener(new ReloadListener());
 	}
 	public static Identifier makeID(String name) {
 		return Identifier.of(MOD_ID, name);

@@ -28,7 +28,7 @@ public class PotionTooltipMixin extends ItemMixin {
 			tooltip.add(ScreenTexts.EMPTY);
 			tooltip.add(Text.translatable("brewery.ingredient_list_header").formatted(Formatting.DARK_AQUA));
 
-			for (Item item : ModPotionUtils.get_ingredients(stack)) {
+			for (Item item : ModPotionUtils.getIngredients(stack)) {
 				tooltip.add(Text.translatable(item.getTranslationKey()).formatted(Formatting.DARK_AQUA));
 			}
 		}

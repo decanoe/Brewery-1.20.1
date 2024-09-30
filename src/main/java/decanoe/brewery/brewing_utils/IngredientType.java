@@ -27,7 +27,7 @@ public class IngredientType {
             this(effect, duration, 0);
         }
         public IngredientEffect(StatusEffect effect) {
-            this(effect, ModPotionUtils.get_duration(5));
+            this(effect, ModPotionUtils.getDuration(5));
         }
 
         @Override
@@ -42,7 +42,7 @@ public class IngredientType {
                 }
             }
 
-            effects.add(ModPotionUtils.Effects.cap_effect(new StatusEffectInstance(this.effect, this.duration, this.amplifier)));
+            effects.add(ModPotionUtils.Effects.capEffect(new StatusEffectInstance(this.effect, this.duration, this.amplifier)));
             potion.removeSubNbt(PotionUtil.CUSTOM_POTION_EFFECTS_KEY);
             return PotionUtil.setCustomPotionEffects(potion, effects);
         }
@@ -83,7 +83,7 @@ public class IngredientType {
             for (int i = 0; i < effects.size(); i++) {
                 if (effects.get(i).getDuration() == StatusEffectInstance.INFINITE) continue;
 
-                effects.set(i, ModPotionUtils.Effects.cap_effect(new StatusEffectInstance(
+                effects.set(i, ModPotionUtils.Effects.capEffect(new StatusEffectInstance(
                     effects.get(i).getEffectType(),
                     Math.round(effects.get(i).getDuration() * this.mult),
                     effects.get(i).getAmplifier(),
@@ -103,7 +103,7 @@ public class IngredientType {
             List<StatusEffectInstance> effects = PotionUtil.getPotionEffects(potion);
 
             for (int i = 0; i < effects.size(); i++) {
-                effects.set(i, ModPotionUtils.Effects.cap_effect(new StatusEffectInstance(
+                effects.set(i, ModPotionUtils.Effects.capEffect(new StatusEffectInstance(
                     effects.get(i).getEffectType(),
                     StatusEffectInstance.INFINITE,
                     effects.get(i).getAmplifier(),
@@ -123,7 +123,7 @@ public class IngredientType {
             List<StatusEffectInstance> effects = PotionUtil.getPotionEffects(potion);
 
             for (int i = 0; i < effects.size(); i++) {
-                effects.set(i, ModPotionUtils.Effects.cap_effect(new StatusEffectInstance(
+                effects.set(i, ModPotionUtils.Effects.capEffect(new StatusEffectInstance(
                     effects.get(i).getEffectType(),
                     effects.get(i).getDuration(),
                     effects.get(i).getAmplifier() + 1,
@@ -143,7 +143,7 @@ public class IngredientType {
             List<StatusEffectInstance> effects = PotionUtil.getPotionEffects(potion);
 
             for (int i = 0; i < effects.size(); i++) {
-                effects.set(i, ModPotionUtils.Effects.cap_effect(new StatusEffectInstance(
+                effects.set(i, ModPotionUtils.Effects.capEffect(new StatusEffectInstance(
                     ModPotionUtils.Effects.corrupt(effects.get(i).getEffectType()),
                     effects.get(i).getDuration(),
                     effects.get(i).getAmplifier(),
@@ -163,7 +163,7 @@ public class IngredientType {
             List<StatusEffectInstance> effects = PotionUtil.getPotionEffects(potion);
 
             for (int i = 0; i < effects.size(); i++) {
-                effects.set(i, ModPotionUtils.Effects.cap_effect(new StatusEffectInstance(
+                effects.set(i, ModPotionUtils.Effects.capEffect(new StatusEffectInstance(
                     ModPotionUtils.Effects.alter(effects.get(i).getEffectType()),
                     effects.get(i).getDuration(),
                     effects.get(i).getAmplifier(),
@@ -184,7 +184,7 @@ public class IngredientType {
 
             int i = 0;
             while (i < effects.size()) {
-                if (!ModPotionUtils.Effects.is_good(effects.get(i).getEffectType())) effects.remove(i);
+                if (!ModPotionUtils.Effects.isGood(effects.get(i).getEffectType())) effects.remove(i);
                 else i++;
             }
             
@@ -199,7 +199,7 @@ public class IngredientType {
 
             int i = 0;
             while (i < effects.size()) {
-                if (ModPotionUtils.Effects.is_good(effects.get(i).getEffectType())) effects.remove(i);
+                if (ModPotionUtils.Effects.isGood(effects.get(i).getEffectType())) effects.remove(i);
                 else i++;
             }
             
@@ -259,7 +259,7 @@ public class IngredientType {
                 }
 
                 if (!found) {
-                    effects.add(ModPotionUtils.Effects.cap_effect(added_effects.get(j)));
+                    effects.add(ModPotionUtils.Effects.capEffect(added_effects.get(j)));
                 }
             }
             
@@ -280,7 +280,7 @@ public class IngredientType {
             List<StatusEffectInstance> added_effects = PotionUtil.getPotionEffects(ingredient);
 
             for (int j = 0; j < added_effects.size(); j++) {
-                added_effects.set(j, ModPotionUtils.Effects.cap_effect(new StatusEffectInstance(
+                added_effects.set(j, ModPotionUtils.Effects.capEffect(new StatusEffectInstance(
                     added_effects.get(j).getEffectType(),
                     Math.round(added_effects.get(j).getDuration() * this.mult),
                     added_effects.get(j).getAmplifier(),
@@ -299,7 +299,7 @@ public class IngredientType {
                 }
 
                 if (!found) {
-                    effects.add(ModPotionUtils.Effects.cap_effect(added_effects.get(j)));
+                    effects.add(ModPotionUtils.Effects.capEffect(added_effects.get(j)));
                 }
             }
             
@@ -332,13 +332,13 @@ public class IngredientType {
 
         
         public List<IngredientType> get_ingredient_effects(ItemStack potion) {
-            return map.getOrDefault(ModPotionUtils.PotionBases.get_base(PotionUtil.getPotion(potion)), default_effects);
+            return map.getOrDefault(ModPotionUtils.PotionBases.getBase(PotionUtil.getPotion(potion)), default_effects);
         }
     }
 
     static StatusEffectInstance combine_effects(StatusEffectInstance base_effect, StatusEffectInstance added_effect) {
         if (base_effect.getAmplifier() == added_effect.getAmplifier()) {
-            return ModPotionUtils.Effects.cap_effect(new StatusEffectInstance(
+            return ModPotionUtils.Effects.capEffect(new StatusEffectInstance(
                 base_effect.getEffectType(),
                 base_effect.getDuration() + added_effect.getDuration(),
                 base_effect.getAmplifier(),
@@ -349,7 +349,7 @@ public class IngredientType {
         }
         else if (base_effect.getAmplifier() > added_effect.getAmplifier()) {
             int diff = base_effect.getAmplifier() - added_effect.getAmplifier();
-            return ModPotionUtils.Effects.cap_effect(new StatusEffectInstance(
+            return ModPotionUtils.Effects.capEffect(new StatusEffectInstance(
                 base_effect.getEffectType(),
                 (int)Math.round(added_effect.getDuration() * Math.pow(0.75, diff)) + base_effect.getDuration(),
                 base_effect.getAmplifier(),
@@ -360,7 +360,7 @@ public class IngredientType {
         }
         else {
             int diff = added_effect.getAmplifier() - base_effect.getAmplifier();
-            return ModPotionUtils.Effects.cap_effect(new StatusEffectInstance(
+            return ModPotionUtils.Effects.capEffect(new StatusEffectInstance(
                 base_effect.getEffectType(),
                 added_effect.getDuration() + (int)Math.round(base_effect.getDuration() * Math.pow(0.75, diff)),
                 added_effect.getAmplifier(),
