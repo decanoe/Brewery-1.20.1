@@ -74,7 +74,7 @@ public class ModPotionUtils {
         }
 
         public static void registerPotions() {
-            // nedded even if empty to register potion
+            // needed even if empty to register potion
             
             ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(content -> {
                 content.addAfter(Items.POTION, PotionUtil.setPotion(new ItemStack(Items.POTION), ROCKY_BASE_POTION));
@@ -116,20 +116,24 @@ public class ModPotionUtils {
             if (!ingredient_map.containsKey(ingredient))
                 ingredient_map.put(ingredient, new PotionIngredientMap(List.of()));
             
-            ingredient_map.get(ingredient).put(potion, new ArrayList<IngredientType>(effects));
+            ingredient_map.get(ingredient).put(potion, new ArrayList<>(effects));
         }
+
         public static void register(Item ingredient, Potion potion, IngredientType effect) {
             register(ingredient, potion, List.of(effect));
         }
+
         public static void register(Item ingredient, Potion potion, IngredientType... effects) {
             register(ingredient, potion, List.of(effects));
         }
+
         public static void register(Item ingredient, List<IngredientType> effects) {
             if (ingredient_map.containsKey(ingredient))
-                ingredient_map.get(ingredient).put_default(new ArrayList<IngredientType>(effects));
+                ingredient_map.get(ingredient).put_default(new ArrayList<>(effects));
             else
-                ingredient_map.put(ingredient, new PotionIngredientMap(new ArrayList<IngredientType>(effects)));
+                ingredient_map.put(ingredient, new PotionIngredientMap(new ArrayList<>(effects)));
         }
+
         public static void register(Item ingredient, IngredientType effect) {
             register(ingredient, List.of(effect));
         }
