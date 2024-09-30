@@ -26,6 +26,23 @@ public class ReloadListener implements SimpleSynchronousResourceReloadListener {
 
     @Override
     public void reload(ResourceManager manager) {
+        for (Entry<Identifier, Resource> entry : manager.findResources("configs", id ->
+                id.toString().equals("brewery:configs/config.json")).entrySet()) {
+            try {
+                Brewery.LOGGER.info("Loading config");
+
+                Resource resource = entry.getValue();
+
+                String content = new String(resource.getInputStream().readAllBytes());
+                Map<String, ?> json = new Gson().fromJson(content, Map.class);
+
+                // TODO @Decanoe json is the config Map, read the values you want in it using .get()
+
+            } catch (Exception e) {
+                Brewery.LOGGER.info("Error while loading config");
+            }
+        }
+
         for (Entry<Identifier, Resource> entry : manager.findResources("ingredients", id->id.toString().endsWith(".json")).entrySet()) {
             try {
                 Brewery.LOGGER.info("Loading ingredient : " + entry.getKey().toString());
