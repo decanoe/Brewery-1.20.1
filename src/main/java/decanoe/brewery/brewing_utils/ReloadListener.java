@@ -134,7 +134,7 @@ public class ReloadListener implements SimpleSynchronousResourceReloadListener {
 
             case "color" -> {
                 if (json.containsKey("color"))
-                    return new IngredientType.IngredientColor(toInt(json.get("color")));
+                    return new IngredientType.IngredientColor(Integer.decode(toStr(json.get("color"))));
                 return new IngredientType.IngredientColor();
             }
 
