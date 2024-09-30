@@ -1,0 +1,15 @@
+{
+  "item": "minecraft:glistering_melon_slice",
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:saturation",
+      "duration": 1
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:regeneration",
+      "duration": 200
+    }
+  ]
+}

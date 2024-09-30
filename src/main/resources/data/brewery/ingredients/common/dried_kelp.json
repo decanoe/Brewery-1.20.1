@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:dried_kelp",
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:saturation",
+      "duration": 1
+    }
+  ]
+}

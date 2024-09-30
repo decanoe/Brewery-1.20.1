@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:pumpkin",
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:saturation",
+      "duration": 1
+    }
+  ]
+}

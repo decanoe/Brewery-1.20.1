@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:poisonous_potato",
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:poison",
+      "duration": 100
+    }
+  ]
+}

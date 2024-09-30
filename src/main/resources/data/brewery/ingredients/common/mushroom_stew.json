@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:mushroom_stew",
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:saturation",
+      "duration": 1
+    }
+  ]
+}

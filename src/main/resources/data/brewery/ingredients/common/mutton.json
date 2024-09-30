@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:mutton",
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:nausea",
+      "duration": 100
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:beef",
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:nausea",
+      "duration": 100
+    }
+  ]
+}

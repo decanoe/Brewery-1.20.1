@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:jack_o_lantern",
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:saturation",
+      "duration": 1
+    }
+  ]
+}

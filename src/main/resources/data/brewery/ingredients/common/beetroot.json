@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:beetroot",
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:saturation",
+      "duration": 1
+    }
+  ]
+}

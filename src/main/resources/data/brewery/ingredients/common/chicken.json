@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:chicken",
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:nausea",
+      "duration": 100
+    }
+  ]
+}

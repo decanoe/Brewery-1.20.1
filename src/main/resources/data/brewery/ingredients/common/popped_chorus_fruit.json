@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:popped_chorus_fruit",
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:levitation",
+      "duration": 100
+    }
+  ]
+}

@@ -216,6 +216,7 @@ public class ModPotionUtils {
             register(Items.POISONOUS_POTATO, new IngredientEffect(StatusEffects.POISON, getDuration(5)));
             register(Items.POPPED_CHORUS_FRUIT, new IngredientEffect(StatusEffects.LEVITATION, getDuration(5)));
 
+            // TODO pk c dans le common et pas stew ca ;-;
             register(Items.HONEYCOMB                , PotionBases.STEW_BASE_POTION, new IngredientEffect(StatusEffects.INSTANT_HEALTH, 1, 0));
             register(Items.HONEY_BLOCK              , PotionBases.STEW_BASE_POTION, new IngredientEffect(StatusEffects.INSTANT_HEALTH, 1, 1));
             register(Items.HONEY_BOTTLE             , PotionBases.STEW_BASE_POTION, new IngredientEffect(StatusEffects.INSTANT_HEALTH, 1, 0));

@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:cake",
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:saturation",
+      "duration": 600
+    }
+  ]
+}
