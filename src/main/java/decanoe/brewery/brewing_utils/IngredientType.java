@@ -31,12 +31,12 @@ public class IngredientType {
         }
 
         @Override
-        public ItemStack apply_effect(ItemStack potion, ItemStack ingredient) {
+        public ItemStack applyEffect(ItemStack potion, ItemStack ingredient) {
             List<StatusEffectInstance> effects = PotionUtil.getPotionEffects(potion);
             for (int i = 0; i < effects.size(); i++) {
                 if (effects.get(i).getEffectType() == this.effect) {
 
-                    effects.set(i, combine_effects(effects.get(i), new StatusEffectInstance(this.effect, this.duration, this.amplifier)));
+                    effects.set(i, combineEffects(effects.get(i), new StatusEffectInstance(this.effect, this.duration, this.amplifier)));
                     potion.removeSubNbt(PotionUtil.CUSTOM_POTION_EFFECTS_KEY);
                     return PotionUtil.setCustomPotionEffects(potion, effects);
                 }
@@ -61,7 +61,7 @@ public class IngredientType {
         }
 
         @Override
-        public ItemStack apply_effect(ItemStack potion, ItemStack ingredient) {
+        public ItemStack applyEffect(ItemStack potion, ItemStack ingredient) {
             potion.getOrCreateNbt().putInt(PotionUtil.CUSTOM_POTION_COLOR_KEY, this.color);
             return potion;
         }
@@ -77,7 +77,7 @@ public class IngredientType {
         }
 
         @Override
-        public ItemStack apply_effect(ItemStack potion, ItemStack ingredient) {
+        public ItemStack applyEffect(ItemStack potion, ItemStack ingredient) {
             List<StatusEffectInstance> effects = PotionUtil.getPotionEffects(potion);
 
             for (int i = 0; i < effects.size(); i++) {
@@ -99,7 +99,7 @@ public class IngredientType {
     }
     public static class IngredientInfinite extends IngredientType {
         @Override
-        public ItemStack apply_effect(ItemStack potion, ItemStack ingredient) {
+        public ItemStack applyEffect(ItemStack potion, ItemStack ingredient) {
             List<StatusEffectInstance> effects = PotionUtil.getPotionEffects(potion);
 
             for (int i = 0; i < effects.size(); i++) {
@@ -119,7 +119,7 @@ public class IngredientType {
     }
     public static class IngredientAmplifier extends IngredientType {
         @Override
-        public ItemStack apply_effect(ItemStack potion, ItemStack ingredient) {
+        public ItemStack applyEffect(ItemStack potion, ItemStack ingredient) {
             List<StatusEffectInstance> effects = PotionUtil.getPotionEffects(potion);
 
             for (int i = 0; i < effects.size(); i++) {
@@ -139,7 +139,7 @@ public class IngredientType {
     }
     public static class IngredientCorruption extends IngredientType {
         @Override
-        public ItemStack apply_effect(ItemStack potion, ItemStack ingredient) {
+        public ItemStack applyEffect(ItemStack potion, ItemStack ingredient) {
             List<StatusEffectInstance> effects = PotionUtil.getPotionEffects(potion);
 
             for (int i = 0; i < effects.size(); i++) {
@@ -159,7 +159,7 @@ public class IngredientType {
     }
     public static class IngredientAlteration extends IngredientType {
         @Override
-        public ItemStack apply_effect(ItemStack potion, ItemStack ingredient) {
+        public ItemStack applyEffect(ItemStack potion, ItemStack ingredient) {
             List<StatusEffectInstance> effects = PotionUtil.getPotionEffects(potion);
 
             for (int i = 0; i < effects.size(); i++) {
@@ -179,7 +179,7 @@ public class IngredientType {
     }
     public static class IngredientCure extends IngredientType {
         @Override
-        public ItemStack apply_effect(ItemStack potion, ItemStack ingredient) {
+        public ItemStack applyEffect(ItemStack potion, ItemStack ingredient) {
             List<StatusEffectInstance> effects = PotionUtil.getPotionEffects(potion);
 
             int i = 0;
@@ -194,7 +194,7 @@ public class IngredientType {
     }
     public static class IngredientInvertCure extends IngredientType {
         @Override
-        public ItemStack apply_effect(ItemStack potion, ItemStack ingredient) {
+        public ItemStack applyEffect(ItemStack potion, ItemStack ingredient) {
             List<StatusEffectInstance> effects = PotionUtil.getPotionEffects(potion);
 
             int i = 0;
@@ -209,7 +209,7 @@ public class IngredientType {
     }
     public static class IngredientHideEffect extends IngredientType {
         @Override
-        public ItemStack apply_effect(ItemStack potion, ItemStack ingredient) {
+        public ItemStack applyEffect(ItemStack potion, ItemStack ingredient) {
             List<StatusEffectInstance> effects = PotionUtil.getPotionEffects(potion);
 
             for (int i = 0; i < effects.size(); i++) {
@@ -230,21 +230,21 @@ public class IngredientType {
     }
     public static class IngredientShowRecipe extends IngredientType {
         @Override
-        public ItemStack apply_effect(ItemStack potion, ItemStack ingredient) {
+        public ItemStack applyEffect(ItemStack potion, ItemStack ingredient) {
             potion.getOrCreateNbt().putBoolean("show_recipe", true);
             return potion;
         }
     }
     public static class IngredientGlint extends IngredientType {
         @Override
-        public ItemStack apply_effect(ItemStack potion, ItemStack ingredient) {
+        public ItemStack applyEffect(ItemStack potion, ItemStack ingredient) {
             potion.getOrCreateNbt().putBoolean("ench_glint", true);
             return potion;
         }
     }
     public static class IngredientTranfer extends IngredientType {
         @Override
-        public ItemStack apply_effect(ItemStack potion, ItemStack ingredient) {
+        public ItemStack applyEffect(ItemStack potion, ItemStack ingredient) {
             List<StatusEffectInstance> effects = PotionUtil.getPotionEffects(potion);
             List<StatusEffectInstance> added_effects = PotionUtil.getPotionEffects(ingredient);
 
@@ -252,7 +252,7 @@ public class IngredientType {
                 boolean found = false;
                 for (int i = 0; i < effects.size(); i++) {
                     if (effects.get(i).getEffectType() == added_effects.get(j).getEffectType()) {
-                        effects.set(i, combine_effects(effects.get(i), added_effects.get(j)));
+                        effects.set(i, combineEffects(effects.get(i), added_effects.get(j)));
                         found = true;
                         break;
                     }
@@ -275,7 +275,7 @@ public class IngredientType {
         }
 
         @Override
-        public ItemStack apply_effect(ItemStack potion, ItemStack ingredient) {
+        public ItemStack applyEffect(ItemStack potion, ItemStack ingredient) {
             List<StatusEffectInstance> effects = PotionUtil.getPotionEffects(potion);
             List<StatusEffectInstance> added_effects = PotionUtil.getPotionEffects(ingredient);
 
@@ -292,7 +292,7 @@ public class IngredientType {
                 boolean found = false;
                 for (int i = 0; i < effects.size(); i++) {
                     if (effects.get(i).getEffectType() == added_effects.get(j).getEffectType()) {
-                        effects.set(i, combine_effects(effects.get(i), added_effects.get(j)));
+                        effects.set(i, combineEffects(effects.get(i), added_effects.get(j)));
                         found = true;
                         break;
                     }
@@ -314,7 +314,7 @@ public class IngredientType {
 
         PotionIngredientMap(List<IngredientType> default_effect) {
             this.default_effects = default_effect;
-            this.map = new HashMap<Potion, List<IngredientType>>();
+            this.map = new HashMap<>();
         };
         PotionIngredientMap put(Potion potion, List<IngredientType> effects) {
             if (map.containsKey(potion)) {
@@ -325,18 +325,18 @@ public class IngredientType {
             }
             return this;
         }
-        PotionIngredientMap put_default(List<IngredientType> effects) {
+        PotionIngredientMap putDefault(List<IngredientType> effects) {
             default_effects.addAll(effects);
             return this;
         }
 
         
-        public List<IngredientType> get_ingredient_effects(ItemStack potion) {
+        public List<IngredientType> getIngredientEffects(ItemStack potion) {
             return map.getOrDefault(ModPotionUtils.PotionBases.getBase(PotionUtil.getPotion(potion)), default_effects);
         }
     }
 
-    static StatusEffectInstance combine_effects(StatusEffectInstance base_effect, StatusEffectInstance added_effect) {
+    static StatusEffectInstance combineEffects(StatusEffectInstance base_effect, StatusEffectInstance added_effect) {
         if (base_effect.getAmplifier() == added_effect.getAmplifier()) {
             return ModPotionUtils.Effects.capEffect(new StatusEffectInstance(
                 base_effect.getEffectType(),
@@ -372,7 +372,7 @@ public class IngredientType {
     }
 
     IngredientType() {}
-    public ItemStack apply_effect(ItemStack potion, ItemStack ingredient) {
+    public ItemStack applyEffect(ItemStack potion, ItemStack ingredient) {
         return potion;
     }
 }

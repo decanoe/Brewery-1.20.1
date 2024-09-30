@@ -110,7 +110,7 @@ public class ModPotionUtils {
         public static final TagKey<Item> AWKWARD_BASE_INGREDIENT = TagKey.of(RegistryKeys.ITEM, Identifier.of("brewery", "potion_awkward_base_ingredients"));
         public static final TagKey<Item> THICK_BASE_INGREDIENT = TagKey.of(RegistryKeys.ITEM, Identifier.of("brewery", "potion_thick_base_ingredients"));
 
-        private static HashMap<Item, PotionIngredientMap> ingredient_map = new HashMap<Item, PotionIngredientMap>();
+        private static HashMap<Item, PotionIngredientMap> ingredient_map = new HashMap<>();
 
         public static void register(Item ingredient, Potion potion, List<IngredientType> effects) {
             if (!ingredient_map.containsKey(ingredient))
@@ -129,7 +129,7 @@ public class ModPotionUtils {
 
         public static void register(Item ingredient, List<IngredientType> effects) {
             if (ingredient_map.containsKey(ingredient))
-                ingredient_map.get(ingredient).put_default(new ArrayList<>(effects));
+                ingredient_map.get(ingredient).putDefault(new ArrayList<>(effects));
             else
                 ingredient_map.put(ingredient, new PotionIngredientMap(new ArrayList<>(effects)));
         }
@@ -912,12 +912,12 @@ public class ModPotionUtils {
             if (!ingredient_map.containsKey(ingredient.getItem()))
                 return makeFailed(potion);
 
-            List<IngredientType> i_types = ingredient_map.get(ingredient.getItem()).get_ingredient_effects(potion);
+            List<IngredientType> i_types = ingredient_map.get(ingredient.getItem()).getIngredientEffects(potion);
             if (i_types.size() == 0)
                 return makeFailed(potion);
 
             for (IngredientType t : i_types) {
-                potion = t.apply_effect(potion, ingredient);
+                potion = t.applyEffect(potion, ingredient);
             }
             return potion;
         }
