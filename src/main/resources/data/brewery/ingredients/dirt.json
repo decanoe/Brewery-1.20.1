@@ -1,12 +1,21 @@
 {
   "item": "minecraft:dirt",
-  "base": "brewery:awkward",
+  "base": "awkward",
   "effects": [
     {
-      "type": "duration_infinite"
+      "type": "color",
+      "color": "0x0000ff00"
     },
     {
-      "type": "cure"
+      "type": "effect",
+      "effect": "minecraft:haste",
+      "duration": 200
+    },
+    {
+      "type": "amplifier"
+    },
+    {
+      "type": "enchantment_glint"
     }
   ]
 }

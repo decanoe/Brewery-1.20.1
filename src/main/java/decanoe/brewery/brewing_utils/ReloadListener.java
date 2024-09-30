@@ -1,16 +1,14 @@
 package decanoe.brewery.brewing_utils;
 
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Objects;
 
 import com.google.gson.Gson;
 import decanoe.brewery.Brewery;
 import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
-import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.item.Item;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.Potions;
@@ -58,18 +56,18 @@ public class ReloadListener implements SimpleSynchronousResourceReloadListener {
                     return;
                 }
 
-                Item item = Registries.ITEM.get(new Identifier(str(json.get("item"))));
+                Item item = Registries.ITEM.get(new Identifier(toStr(json.get("item"))));
                 if (item == null) {
                     Brewery.LOGGER.info("Error while loading ingredient, item doesn't exist : " + json.get("item"));
                     return;
                 }
 
-                Potion base = switch (str(json.get("base"))) {
-                    case "brewery:awkward" -> Potions.AWKWARD;
-                    case "brewery:mundane" -> Potions.MUNDANE;
-                    case "brewery:rocky" -> ModPotionUtils.PotionBases.ROCKY_BASE_POTION;
-                    case "brewery:stew" -> ModPotionUtils.PotionBases.STEW_BASE_POTION;
-                    case "brewery:thick" -> Potions.THICK;
+                Potion base = switch (toStr(json.get("base"))) {
+                    case "awkward" -> Potions.AWKWARD;
+                    case "mundane" -> Potions.MUNDANE;
+                    case "rocky" -> ModPotionUtils.PotionBases.ROCKY_BASE_POTION;
+                    case "stew" -> ModPotionUtils.PotionBases.STEW_BASE_POTION;
+                    case "thick" -> Potions.THICK;
                     default -> null;
                 };
                 if (base == null) {
@@ -78,6 +76,7 @@ public class ReloadListener implements SimpleSynchronousResourceReloadListener {
                 }
 
                 List<IngredientType> effects = parseEffects(json);
+                Brewery.LOGGER.info(effects + "");
 
                 ModPotionUtils.Ingredients.register(item, base, effects);
 
@@ -87,8 +86,12 @@ public class ReloadListener implements SimpleSynchronousResourceReloadListener {
         }
     }
 
-    public static String str(Object o) {
+    public static String toStr(Object o) {
         return String.valueOf(o);
+    }
+
+    public static int toInt(Object o) {
+        return Double.valueOf(toStr(o)).intValue();
     }
 
     public static List<IngredientType> parseEffects(Map<String, ?> json) {
@@ -112,17 +115,33 @@ public class ReloadListener implements SimpleSynchronousResourceReloadListener {
     public static IngredientType parseEffect(Map<String, ?> json) {
         if (!json.containsKey("type")) return null;
 
-        switch (str(json.get("type"))) {
+        switch (toStr(json.get("type"))) {
             case "effect" -> {
+                if (json.containsKey("effect")) {
+                    StatusEffect effect = Registries.STATUS_EFFECT.get(new Identifier(toStr(json.get("effect"))));
+                    if (effect == null) return null;
+
+                    if (json.containsKey("duration")) {
+                        if (json.containsKey("amplifier")) {
+                            return new IngredientType.IngredientEffect(effect, toInt(json.get("duration")), toInt(json.get("amplifier")));
+                        }
+                        return new IngredientType.IngredientEffect(effect, toInt(json.get("duration")));
+                    }
+                    return new IngredientType.IngredientEffect(effect);
+                }
                 return null;
             }
 
             case "color" -> {
-                return null;
+                if (json.containsKey("color"))
+                    return new IngredientType.IngredientColor(toInt(json.get("color")));
+                return new IngredientType.IngredientColor();
             }
 
             case "duration" -> {
-                return null;
+                if (json.containsKey("multiplier"))
+                    return new IngredientType.IngredientDuration(toInt(json.get("multiplier")));
+                return new IngredientType.IngredientDuration();
             }
 
             case "duration_infinite" -> {
@@ -130,7 +149,7 @@ public class ReloadListener implements SimpleSynchronousResourceReloadListener {
             }
 
             case "amplifier" -> {
-                return null;
+                return new IngredientType.IngredientAmplifier();
             }
 
             case "corruption" -> {
