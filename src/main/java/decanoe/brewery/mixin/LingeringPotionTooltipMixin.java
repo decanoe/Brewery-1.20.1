@@ -21,6 +21,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(LingeringPotionItem.class)
 public class LingeringPotionTooltipMixin extends ItemMixin {
+
+	// for some reason, lingering potions have a different tooltip than regular potion (duration multiplied by 0.25)
 	@Inject(at = @At("TAIL"), method = "appendTooltip", cancellable = true)
 	public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context, CallbackInfo callback_info) {
 		if (stack.hasNbt() && stack.getNbt().contains("show_recipe")) {
