@@ -1,9 +1,6 @@
 {
   "item": "minecraft:lily_of_the_valley",
-<<<<<<< HEAD:src/main/resources/data/brewery/ingredients/default/lily_of_the_valley.json
 
-=======
->>>>>>> af8d2df92a279e1fba0923464ce8121b68e58a8e:src/main/resources/data/brewery/ingredients/common/lily_of_the_valley.json
   "effects": [
     {
       "type": "effect",

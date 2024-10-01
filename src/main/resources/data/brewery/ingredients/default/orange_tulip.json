@@ -1,9 +1,6 @@
 {
   "item": "minecraft:orange_tulip",
-<<<<<<< HEAD:src/main/resources/data/brewery/ingredients/default/orange_tulip.json
 
-=======
->>>>>>> af8d2df92a279e1fba0923464ce8121b68e58a8e:src/main/resources/data/brewery/ingredients/common/orange_tulip.json
   "effects": [
     {
       "type": "effect",

@@ -1,9 +1,6 @@
 {
   "item": "minecraft:blue_orchid",
-<<<<<<< HEAD:src/main/resources/data/brewery/ingredients/default/blue_orchid.json
 
-=======
->>>>>>> af8d2df92a279e1fba0923464ce8121b68e58a8e:src/main/resources/data/brewery/ingredients/common/blue_orchid.json
   "effects": [
     {
       "type": "effect",

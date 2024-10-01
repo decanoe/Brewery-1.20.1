@@ -146,7 +146,7 @@ public class ModPotionUtils {
             register(ingredient, List.of(effects));
         }
 
-        @SuppressWarnings("unused") private static void registerDyes() {
+        private static void registerDyes() {
             register(Items.WHITE_DYE, new IngredientColor(0xffcfd5d6));
             register(Items.ORANGE_DYE, new IngredientColor(0xffe06101));
             register(Items.MAGENTA_DYE, new IngredientColor(0xffa9309f));
@@ -164,7 +164,7 @@ public class ModPotionUtils {
             register(Items.RED_DYE, new IngredientColor(0xff8e2121));
             register(Items.BLACK_DYE, new IngredientColor(0xff080a0f));
         }
-        @SuppressWarnings("unused") private static void registerUniversalModifier() {
+        private static void registerUniversalModifier() {
             register(Items.REDSTONE, new IngredientDuration(1.25f));
             register(Items.COMPASS, new IngredientDuration(2));
             register(Items.RECOVERY_COMPASS, new IngredientInfinite(), new IngredientGlint());
@@ -189,7 +189,7 @@ public class ModPotionUtils {
 
             register(Items.EXPERIENCE_BOTTLE, new IngredientGlint());
         }
-        @SuppressWarnings("unused") private static void registerDefault() {
+        private static void registerDefault() {
             //#region FOOD
 
             // raw meat
@@ -228,6 +228,7 @@ public class ModPotionUtils {
             register(Items.HONEY_BLOCK              , PotionBases.STEW_BASE_POTION, new IngredientEffect(StatusEffects.INSTANT_HEALTH, 1, 1));
             register(Items.HONEY_BOTTLE             , PotionBases.STEW_BASE_POTION, new IngredientEffect(StatusEffects.INSTANT_HEALTH, 1, 0));
 
+            // TODO en data jusque là
             // #endregion
             //#region FLOWER
             register(Items.ALLIUM,              new IngredientEffect(StatusEffects.FIRE_RESISTANCE, getDuration(4)));
@@ -245,7 +246,6 @@ public class ModPotionUtils {
             register(Items.WHITE_TULIP,         new IngredientEffect(StatusEffects.WEAKNESS,        getDuration(9)));
             register(Items.WITHER_ROSE,         new IngredientEffect(StatusEffects.WITHER,          getDuration(8)));
 
-            // TODO jusque la
             register(Items.LILAC,               new IngredientEffect(StatusEffects.FIRE_RESISTANCE, getDuration(8)));
             register(Items.PEONY,               new IngredientEffect(StatusEffects.WEAKNESS,        getDuration(18)));
             register(Items.PITCHER_PLANT,       new IngredientEffect(StatusEffects.HASTE,           getDuration(24)));
@@ -362,7 +362,7 @@ public class ModPotionUtils {
                 new IngredientEffect(StatusEffects.REGENERATION, getDuration(30)));
             //#endregion
         }
-        @SuppressWarnings("unused") private static void registerStewIngredients() {
+        private static void registerStewIngredients() {
             //#region FOOD
 
             // raw meat
@@ -416,7 +416,7 @@ public class ModPotionUtils {
             register(Items.EGG, PotionBases.STEW_BASE_POTION, new IngredientAmplifier());
             //#endregion
         }
-        @SuppressWarnings("unused") private static void registerRockyIngredients() {
+        private static void registerRockyIngredients() {
             //#region ROCKS
             // cobble like blocs
             for (Item item : List.of(Items.COBBLESTONE, Items.COBBLED_DEEPSLATE)) {
@@ -562,7 +562,7 @@ public class ModPotionUtils {
             register(Items.TNT          , PotionBases.ROCKY_BASE_POTION, new IngredientEffect(StatusEffects.INSTANT_DAMAGE, 1, 3));
             register(Items.END_CRYSTAL  , PotionBases.ROCKY_BASE_POTION, new IngredientEffect(StatusEffects.NIGHT_VISION, getDuration(240)));
         }
-        @SuppressWarnings("unused") private static void registerElixirIngredients() {
+        private static void registerElixirIngredients() {
             //#region FLOWER
             register(Items.ALLIUM,              Potions.THICK, new IngredientEffect(StatusEffects.FIRE_RESISTANCE, getDuration(30)));
             register(Items.AZURE_BLUET,         Potions.THICK, new IngredientEffect(StatusEffects.BLINDNESS,       getDuration(20)));
@@ -712,7 +712,7 @@ public class ModPotionUtils {
             }
             //#endregion
         }
-        @SuppressWarnings("unused") private static void registerAwkwardIngredients() {
+        private static void registerAwkwardIngredients() {
             //#region MUSHROOM
             register(Items.CRIMSON_ROOTS            , Potions.AWKWARD, new IngredientEffect(StatusEffects.REGENERATION, getDuration(30)));
             register(Items.WEEPING_VINES            , Potions.AWKWARD, new IngredientEffect(StatusEffects.INSTANT_DAMAGE, 1));
@@ -772,7 +772,7 @@ public class ModPotionUtils {
             register(Items.PHANTOM_MEMBRANE, Potions.AWKWARD, new IngredientEffect(StatusEffects.SLOW_FALLING, 180));
             //#endregion
         }
-        @SuppressWarnings("unused") private static void registerMundaneIngredients() {
+        private static void registerMundaneIngredients() {
             //#region ANIMAL
             for (Item item : List.of(Items.WHITE_WOOL, Items.ORANGE_WOOL, Items.MAGENTA_WOOL, Items.LIGHT_BLUE_WOOL, Items.YELLOW_WOOL, Items.LIME_WOOL, Items.PINK_WOOL, Items.GRAY_WOOL, Items.LIGHT_GRAY_WOOL, Items.CYAN_WOOL, Items.PURPLE_WOOL, Items.BLUE_WOOL, Items.BROWN_WOOL, Items.GREEN_WOOL, Items.RED_WOOL, Items.BLACK_WOOL)){
                 register(item, Potions.MUNDANE, new IngredientEffect(StatusEffects.SLOWNESS, getDuration(60)));
@@ -870,7 +870,7 @@ public class ModPotionUtils {
                 e.printStackTrace();
             }
         }
-        @SuppressWarnings("unused") private static void create_json(Item item, PotionIngredientMap potion_map, String root_dir, String category) {
+        private static void create_json(Item item, PotionIngredientMap potion_map, String root_dir, String category) {
             if (!potion_map.default_effects.isEmpty())
                 create_json(item, "", potion_map.default_effects, root_dir + "/default/" + category);
             
@@ -897,6 +897,7 @@ public class ModPotionUtils {
             // registerAwkwardIngredients();
             // registerMundaneIngredients();
 
+            // Brewery.LOGGER.info(ingredient_map.size() + " ingredients registered, have fun !");
             // printInfos();
         }
 

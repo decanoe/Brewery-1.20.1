@@ -1,18 +1,10 @@
 {
   "item": "minecraft:poppy",
-<<<<<<< HEAD:src/main/resources/data/brewery/ingredients/default/poppy.json
 
   "effects": [
     {
       "type": "effect",
       "effect": "minecraft:night_vision"
-=======
-  "effects": [
-    {
-      "type": "effect",
-      "effect": "minecraft:night_vision",
-      "duration": 100
->>>>>>> af8d2df92a279e1fba0923464ce8121b68e58a8e:src/main/resources/data/brewery/ingredients/common/poppy.json
     }
   ]
 }

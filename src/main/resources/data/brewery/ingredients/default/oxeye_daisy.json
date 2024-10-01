@@ -1,9 +1,6 @@
 {
   "item": "minecraft:oxeye_daisy",
-<<<<<<< HEAD:src/main/resources/data/brewery/ingredients/default/oxeye_daisy.json
 
-=======
->>>>>>> af8d2df92a279e1fba0923464ce8121b68e58a8e:src/main/resources/data/brewery/ingredients/common/oxeye_daisy.json
   "effects": [
     {
       "type": "effect",
