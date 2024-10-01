@@ -1,6 +1,9 @@
 {
   "item": "minecraft:wither_rose",
+<<<<<<< HEAD:src/main/resources/data/brewery/ingredients/default/wither_rose.json
 
+=======
+>>>>>>> af8d2df92a279e1fba0923464ce8121b68e58a8e:src/main/resources/data/brewery/ingredients/common/wither_rose.json
   "effects": [
     {
       "type": "effect",
