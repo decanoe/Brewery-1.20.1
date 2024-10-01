@@ -224,6 +224,7 @@ public class IngredientType {
             }
             
             potion.removeSubNbt(PotionUtil.CUSTOM_POTION_EFFECTS_KEY);
+            potion.getOrCreateNbt().putBoolean("hide_effects", true);
             potion.addHideFlag(TooltipSection.ADDITIONAL);
             return PotionUtil.setCustomPotionEffects(potion, effects);
         }

@@ -2,8 +2,11 @@ package decanoe.brewery.mixin;
 
 import decanoe.brewery.brewing_utils.ModPotionUtils;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemStack.TooltipSection;
 import net.minecraft.item.Items;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.recipe.BrewingRecipeRegistry;
+import net.minecraft.registry.Registries;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionUtil;
 import net.minecraft.potion.Potions;
@@ -42,6 +45,28 @@ public class BrewingRecipeRegistryMixin {
 		cir.setReturnValue(ModPotionUtils.pushIngredient(cir.getReturnValue(), ingredient.getItem()));
 
 		if (has_changed) {  // to not interfer with vanilla brewing
+			if (cir.getReturnValue().getItem() == input.getItem()) return;
+
+			// if the object changed we need to put the custom potion tags back (change from potion to throwable potion for exemple)
+			ItemStack output = cir.getReturnValue();
+			NbtCompound nbt_output = output.getOrCreateNbt();
+			NbtCompound nbt_input = input.getNbt();
+			// transfer data
+			for (String key : new String[]{PotionUtil.CUSTOM_POTION_COLOR_KEY, PotionUtil.CUSTOM_POTION_EFFECTS_KEY, "hide_effects", "show_recipe", "ench_glint"}) {
+				if (nbt_input.contains(key))
+					nbt_output.put(key, nbt_input.get(key));
+			}
+			// transfer ingredients
+			for (int i = 1; i <= ModPotionUtils.getNbIngredient(input); i++) {
+				nbt_output.putString(ModPotionUtils.getNbtId(i), nbt_input.getString(ModPotionUtils.getNbtId(i)));
+			}
+			// apply the hide effect
+			if (nbt_input.contains("hide_effects")) {
+				output.addHideFlag(TooltipSection.ADDITIONAL);
+			}
+			
+			// push the last ingredient that wasn't in input
+			cir.setReturnValue(ModPotionUtils.pushIngredient(output, ingredient.getItem()));
 			return;
 		}
 		

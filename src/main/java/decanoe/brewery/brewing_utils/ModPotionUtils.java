@@ -923,7 +923,13 @@ public class ModPotionUtils {
         }
 
         public static boolean isIngredient(ItemStack ingredient) {
-            return ingredient_map.containsKey(ingredient.getItem());
+            if (ingredient_map.containsKey(ingredient.getItem())) return true;
+            if (ingredient.isIn(ROCKY_BASE_INGREDIENT)) return true;
+            if (ingredient.isIn(STEW_BASE_INGREDIENT)) return true;
+            if (ingredient.isIn(MUNDANE_BASE_INGREDIENT)) return true;
+            if (ingredient.isIn(AWKWARD_BASE_INGREDIENT)) return true;
+            if (ingredient.isIn(THICK_BASE_INGREDIENT)) return true;
+            return false;
         }
     }
     public static final class Effects {
