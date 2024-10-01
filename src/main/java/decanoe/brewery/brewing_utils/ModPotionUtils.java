@@ -541,10 +541,10 @@ public class ModPotionUtils {
             register(Items.AMETHYST_BLOCK       , PotionBases.ROCKY_BASE_POTION, new IngredientAlteration());
 
             register(Items.ECHO_SHARD           , PotionBases.ROCKY_BASE_POTION,
-                new IngredientEffect(StatusEffects.DARKNESS, StatusEffectInstance.INFINITE),
-                new IngredientEffect(StatusEffects.SLOWNESS, StatusEffectInstance.INFINITE, 3),
-                new IngredientEffect(StatusEffects.STRENGTH, StatusEffectInstance.INFINITE, 3),
-                new IngredientEffect(StatusEffects.RESISTANCE, StatusEffectInstance.INFINITE, 3),
+                new IngredientEffect(StatusEffects.DARKNESS, getDuration(480)),
+                new IngredientEffect(StatusEffects.SLOWNESS, getDuration(480), 3),
+                new IngredientEffect(StatusEffects.STRENGTH, getDuration(480), 3),
+                new IngredientEffect(StatusEffects.RESISTANCE, getDuration(480), 3),
                 new IngredientGlint());
             
             register(Items.REDSTONE             , PotionBases.ROCKY_BASE_POTION, new IngredientDuration(2));
@@ -553,7 +553,7 @@ public class ModPotionUtils {
             //#endregion
         
             register(Items.TNT          , PotionBases.ROCKY_BASE_POTION, new IngredientEffect(StatusEffects.INSTANT_DAMAGE, 1, 3));
-            register(Items.END_CRYSTAL  , PotionBases.ROCKY_BASE_POTION, new IngredientEffect(StatusEffects.NIGHT_VISION, 240));
+            register(Items.END_CRYSTAL  , PotionBases.ROCKY_BASE_POTION, new IngredientEffect(StatusEffects.NIGHT_VISION, getDuration(240)));
         }
         private static void registerElixirIngredients() {
             //#region FLOWER
@@ -984,6 +984,10 @@ public class ModPotionUtils {
                     duration = Math.min(duration, this.max_duration);
                     infinite = false;
                 }
+                if (MAX_EFFECT_DURATION != INFINITE) {
+                    duration = Math.min(duration, MAX_EFFECT_DURATION);
+                    infinite = false;
+                }
 
                 return new StatusEffectInstance(instance.getEffectType(), infinite?StatusEffectInstance.INFINITE:duration, amplifier, instance.isAmbient(), instance.shouldShowParticles(), instance.shouldShowIcon(), null, instance.getFactorCalculationData());
             }
@@ -1072,7 +1076,8 @@ public class ModPotionUtils {
         return stack.isOf(Items.POTION) || stack.isOf(Items.SPLASH_POTION) || stack.isOf(Items.LINGERING_POTION);
     }
 
-    public static final int MAX_INGREDIENT_COUNT = 10;
+    public static int MAX_INGREDIENT_COUNT = 10;
+    public static int MAX_EFFECT_DURATION = Effects.EffectCap.INFINITE;
 
     public static String getNbtId(int index) {
         return "ingredient_" + index;
