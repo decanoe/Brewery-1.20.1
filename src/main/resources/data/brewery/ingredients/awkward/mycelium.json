@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:mycelium",
+  "base": "awkward",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:weakness",
+      "duration": 600
+    }
+  ]
+}

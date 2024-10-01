@@ -1,8 +1,0 @@
-{
-  "item": "minecraft:milk_bucket",
-  "effects": [
-    {
-      "type": "cure"
-    }
-  ]
-}

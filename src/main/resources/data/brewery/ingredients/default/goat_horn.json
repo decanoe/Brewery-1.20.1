@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:goat_horn",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:instant_damage",
+      "duration": 1
+    }
+  ]
+}

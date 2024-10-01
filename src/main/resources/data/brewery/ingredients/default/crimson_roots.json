@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:crimson_roots",
+
+  "effects": [
+    {
+      "type": "corruption"
+    },
+    {
+      "type": "duration",
+      "multiplier": 0.75
+    }
+  ]
+}

@@ -1,9 +1,0 @@
-{
-  "item": "minecraft:yellow_dye",
-  "effects": [
-    {
-      "type": "color",
-      "color": "#f1af15"
-    }
-  ]
-}

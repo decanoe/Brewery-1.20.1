@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:ghast_tear",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:regeneration",
+      "duration": 300
+    }
+  ]
+}

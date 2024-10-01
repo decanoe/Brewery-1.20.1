@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:torchflower",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:night_vision"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:soul_sand",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:wither",
+      "duration": 600
+    }
+  ]
+}

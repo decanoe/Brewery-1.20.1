@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:purple_dye",
+
+  "effects": [
+    {
+      "type": "color",
+      "color": "ff64209c"
+    }
+  ]
+}

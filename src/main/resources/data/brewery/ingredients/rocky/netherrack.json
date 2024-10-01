@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:netherrack",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:fire_resistance",
+      "duration": 2400
+    }
+  ]
+}

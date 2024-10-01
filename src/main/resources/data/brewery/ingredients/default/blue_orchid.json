@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:blue_orchid",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:saturation",
+      "duration": 7
+    }
+  ]
+}

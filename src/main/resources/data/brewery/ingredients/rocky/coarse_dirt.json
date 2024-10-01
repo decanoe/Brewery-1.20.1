@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:coarse_dirt",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:nausea",
+      "duration": 400
+    }
+  ]
+}

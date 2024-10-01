@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:dripstone_block",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:slowness",
+      "duration": 600
+    }
+  ]
+}

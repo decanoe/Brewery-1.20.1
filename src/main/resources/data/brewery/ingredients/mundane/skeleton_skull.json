@@ -1,0 +1,18 @@
+{
+  "item": "minecraft:skeleton_skull",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:weakness",
+      "duration": 2400,
+      "amplifier": 1
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:slowness",
+      "duration": 2400
+    }
+  ]
+}

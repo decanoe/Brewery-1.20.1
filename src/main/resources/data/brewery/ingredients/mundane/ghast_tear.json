@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:ghast_tear",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:regeneration",
+      "duration": 7200
+    }
+  ]
+}

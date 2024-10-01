@@ -1,0 +1,16 @@
+{
+  "item": "minecraft:player_head",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:hero_of_the_village",
+      "duration": 600
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:instant_health",
+      "duration": 1
+    }
+  ]
+}

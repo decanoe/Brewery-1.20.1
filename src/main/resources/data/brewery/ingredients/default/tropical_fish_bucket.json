@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:tropical_fish_bucket",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:fire_resistance"
+    }
+  ]
+}

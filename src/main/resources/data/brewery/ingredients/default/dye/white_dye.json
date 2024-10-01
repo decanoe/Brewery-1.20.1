@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:white_dye",
+
+  "effects": [
+    {
+      "type": "color",
+      "color": "ffcfd5d6"
+    }
+  ]
+}

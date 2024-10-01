@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:redstone",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "duration",
+      "multiplier": 2.0
+    }
+  ]
+}

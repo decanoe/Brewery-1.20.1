@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:light_blue_dye",
+
+  "effects": [
+    {
+      "type": "color",
+      "color": "ff2489c7"
+    }
+  ]
+}

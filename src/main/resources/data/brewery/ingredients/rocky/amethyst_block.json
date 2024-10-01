@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:amethyst_block",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "alteration"
+    }
+  ]
+}

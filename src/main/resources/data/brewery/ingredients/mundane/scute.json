@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:scute",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:resistance",
+      "duration": 2400,
+      "amplifier": 1
+    }
+  ]
+}

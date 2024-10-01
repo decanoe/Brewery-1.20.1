@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:copper_ingot",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:haste",
+      "duration": 3600
+    }
+  ]
+}

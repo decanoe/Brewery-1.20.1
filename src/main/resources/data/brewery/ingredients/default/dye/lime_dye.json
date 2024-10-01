@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:lime_dye",
+
+  "effects": [
+    {
+      "type": "color",
+      "color": "ff5ea918"
+    }
+  ]
+}

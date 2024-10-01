@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:vine",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:jump_boost",
+      "duration": 400,
+      "amplifier": 2
+    }
+  ]
+}

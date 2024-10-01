@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:baked_potato",
+  "base": "stew",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:saturation",
+      "duration": 1200,
+      "amplifier": 1
+    }
+  ]
+}

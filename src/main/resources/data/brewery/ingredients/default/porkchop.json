@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:porkchop",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:nausea",
+      "duration": 1
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:rose_bush",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:poison",
+      "duration": 700,
+      "amplifier": 1
+    }
+  ]
+}

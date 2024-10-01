@@ -1,0 +1,18 @@
+{
+  "item": "minecraft:nether_star",
+
+  "effects": [
+    {
+      "type": "amplifier"
+    },
+    {
+      "type": "amplifier"
+    },
+    {
+      "type": "amplifier"
+    },
+    {
+      "type": "enchantment_glint"
+    }
+  ]
+}

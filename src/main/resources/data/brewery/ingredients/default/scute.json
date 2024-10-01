@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:scute",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:resistance"
+    }
+  ]
+}

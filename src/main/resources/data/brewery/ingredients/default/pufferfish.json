@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:pufferfish",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:poison"
+    }
+  ]
+}

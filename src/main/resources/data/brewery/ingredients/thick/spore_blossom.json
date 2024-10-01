@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:spore_blossom",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:slowness",
+      "duration": 400,
+      "amplifier": 1
+    }
+  ]
+}

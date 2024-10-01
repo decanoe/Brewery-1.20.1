@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:amethyst_shard",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "alteration"
+    }
+  ]
+}

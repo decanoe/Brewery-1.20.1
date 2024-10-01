@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:rabbit_foot",
+  "base": "awkward",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:jump_boost",
+      "duration": 3600
+    }
+  ]
+}

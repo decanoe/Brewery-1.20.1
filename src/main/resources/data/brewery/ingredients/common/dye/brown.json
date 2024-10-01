@@ -1,9 +1,0 @@
-{
-  "item": "minecraft:brown_dye",
-  "effects": [
-    {
-      "type": "color",
-      "color": "#603c20"
-    }
-  ]
-}

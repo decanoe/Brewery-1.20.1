@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:baked_potato",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:saturation",
+      "duration": 1
+    }
+  ]
+}

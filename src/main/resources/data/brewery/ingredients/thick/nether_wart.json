@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:nether_wart",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "corruption"
+    }
+  ]
+}

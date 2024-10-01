@@ -1,0 +1,18 @@
+{
+  "item": "minecraft:player_head",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:hero_of_the_village",
+      "duration": 2400
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:instant_health",
+      "duration": 1,
+      "amplifier": 1
+    }
+  ]
+}

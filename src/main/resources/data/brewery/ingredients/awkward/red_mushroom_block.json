@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:red_mushroom_block",
+  "base": "awkward",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:instant_health",
+      "duration": 1,
+      "amplifier": 1
+    }
+  ]
+}

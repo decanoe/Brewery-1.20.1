@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:cobweb",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:slowness",
+      "duration": 600,
+      "amplifier": 1
+    }
+  ]
+}

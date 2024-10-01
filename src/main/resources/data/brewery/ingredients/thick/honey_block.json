@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:honey_block",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "amplifier"
+    }
+  ]
+}

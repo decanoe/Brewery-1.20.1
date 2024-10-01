@@ -1,9 +1,0 @@
-{
-  "item": "minecraft:light_blue_dye",
-  "effects": [
-    {
-      "type": "color",
-      "color": "#2489c7"
-    }
-  ]
-}

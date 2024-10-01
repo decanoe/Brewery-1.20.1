@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:brown_mushroom",
+  "base": "awkward",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:hunger",
+      "duration": 400
+    }
+  ]
+}

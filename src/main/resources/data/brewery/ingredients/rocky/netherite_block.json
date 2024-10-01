@@ -1,0 +1,18 @@
+{
+  "item": "minecraft:netherite_block",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:fire_resistance",
+      "duration": -1
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:resistance",
+      "duration": -1,
+      "amplifier": 2
+    }
+  ]
+}

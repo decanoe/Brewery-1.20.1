@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:redstone_ore",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "duration",
+      "multiplier": 2.0
+    }
+  ]
+}

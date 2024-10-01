@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:sculk",
+  "base": "awkward",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:darkness",
+      "duration": 1200
+    }
+  ]
+}

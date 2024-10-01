@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:lapis_block",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:luck",
+      "duration": 2400,
+      "amplifier": 1
+    }
+  ]
+}

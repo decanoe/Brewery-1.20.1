@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:nether_wart",
+  "base": "awkward",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:health_boost",
+      "duration": 600
+    }
+  ]
+}

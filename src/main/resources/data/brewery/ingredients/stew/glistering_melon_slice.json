@@ -1,0 +1,17 @@
+{
+  "item": "minecraft:glistering_melon_slice",
+  "base": "stew",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:saturation",
+      "duration": 600
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:regeneration",
+      "duration": 1200
+    }
+  ]
+}

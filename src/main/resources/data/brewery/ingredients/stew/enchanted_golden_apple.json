@@ -1,0 +1,19 @@
+{
+  "item": "minecraft:enchanted_golden_apple",
+  "base": "stew",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:saturation",
+      "duration": 3600,
+      "amplifier": 2
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:health_boost",
+      "duration": 72000,
+      "amplifier": 1
+    }
+  ]
+}

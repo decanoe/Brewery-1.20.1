@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:hay_block",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:saturation",
+      "duration": 2400
+    }
+  ]
+}

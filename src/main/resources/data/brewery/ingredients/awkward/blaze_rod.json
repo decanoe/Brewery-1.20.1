@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:blaze_rod",
+  "base": "awkward",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:strength",
+      "duration": 7200
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:lily_pad",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:slow_falling",
+      "duration": 1600
+    }
+  ]
+}

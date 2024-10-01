@@ -1,0 +1,22 @@
+{
+  "item": "minecraft:totem_of_undying",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:absorption",
+      "amplifier": 1
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:regeneration",
+      "duration": 900,
+      "amplifier": 1
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:fire_resistance",
+      "duration": 800
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "item": "minecraft:dragon_head",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:health_boost",
+      "duration": 600,
+      "amplifier": 1
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:slow_falling",
+      "duration": 600
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "item": "minecraft:ancient_debris",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:fire_resistance",
+      "duration": 3600
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:resistance",
+      "duration": 3600,
+      "amplifier": 1
+    }
+  ]
+}

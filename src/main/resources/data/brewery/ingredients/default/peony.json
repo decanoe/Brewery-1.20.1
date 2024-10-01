@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:peony",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:weakness",
+      "duration": 360
+    }
+  ]
+}

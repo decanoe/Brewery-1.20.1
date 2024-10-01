@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:leather",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:resistance"
+    }
+  ]
+}

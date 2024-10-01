@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:phantom_membrane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:slow_falling",
+      "duration": 40
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:crimson_fungus",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "corruption"
+    }
+  ]
+}

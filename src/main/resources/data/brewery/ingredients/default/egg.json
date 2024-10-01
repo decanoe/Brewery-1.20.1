@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:egg",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:resistance"
+    }
+  ]
+}

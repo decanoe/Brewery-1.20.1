@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:egg",
+  "base": "stew",
+
+  "effects": [
+    {
+      "type": "amplifier"
+    }
+  ]
+}

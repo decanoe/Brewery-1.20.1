@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:egg",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:resistance",
+      "duration": 1200
+    }
+  ]
+}

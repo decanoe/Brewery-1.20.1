@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:ink_sac",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:blindness"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:cobblestone",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:mining_fatigue",
+      "duration": 2400
+    }
+  ]
+}

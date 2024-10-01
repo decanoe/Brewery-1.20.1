@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:stripped_mangrove_log",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "corruption"
+    }
+  ]
+}

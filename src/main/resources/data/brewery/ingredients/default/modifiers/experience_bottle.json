@@ -1,0 +1,9 @@
+{
+  "item": "minecraft:experience_bottle",
+
+  "effects": [
+    {
+      "type": "enchantment_glint"
+    }
+  ]
+}

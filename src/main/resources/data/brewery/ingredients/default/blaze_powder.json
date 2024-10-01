@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:blaze_powder",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:strength",
+      "duration": 150
+    }
+  ]
+}

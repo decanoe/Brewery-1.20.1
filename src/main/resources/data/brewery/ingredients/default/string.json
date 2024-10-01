@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:string",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:slowness"
+    }
+  ]
+}

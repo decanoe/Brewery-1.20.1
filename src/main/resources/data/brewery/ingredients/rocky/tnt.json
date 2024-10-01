@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:tnt",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:instant_damage",
+      "duration": 1,
+      "amplifier": 3
+    }
+  ]
+}

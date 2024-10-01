@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:sea_pickle",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:conduit_power"
+    }
+  ]
+}

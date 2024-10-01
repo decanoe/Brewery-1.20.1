@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:oxeye_daisy",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:regeneration",
+      "duration": 160
+    }
+  ]
+}

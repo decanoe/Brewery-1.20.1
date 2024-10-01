@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:bread",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:saturation",
+      "duration": 1
+    }
+  ]
+}

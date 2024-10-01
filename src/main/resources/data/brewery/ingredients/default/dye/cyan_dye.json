@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:cyan_dye",
+
+  "effects": [
+    {
+      "type": "color",
+      "color": "ff157788"
+    }
+  ]
+}

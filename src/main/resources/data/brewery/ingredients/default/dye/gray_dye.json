@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:gray_dye",
+
+  "effects": [
+    {
+      "type": "color",
+      "color": "ff373a3e"
+    }
+  ]
+}

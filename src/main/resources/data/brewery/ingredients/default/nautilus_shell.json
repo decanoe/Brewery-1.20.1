@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:nautilus_shell",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:conduit_power"
+    }
+  ]
+}

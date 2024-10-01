@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:acacia_log",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "alteration"
+    }
+  ]
+}

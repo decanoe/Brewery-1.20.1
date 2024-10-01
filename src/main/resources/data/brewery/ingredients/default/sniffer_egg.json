@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:sniffer_egg",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:resistance"
+    }
+  ]
+}

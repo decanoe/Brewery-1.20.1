@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:rabbit",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:nausea",
+      "duration": 1
+    }
+  ]
+}

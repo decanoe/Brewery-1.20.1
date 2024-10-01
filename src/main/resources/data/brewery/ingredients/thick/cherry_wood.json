@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:cherry_wood",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "alteration"
+    }
+  ]
+}

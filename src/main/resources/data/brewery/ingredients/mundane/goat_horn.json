@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:goat_horn",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:instant_damage",
+      "duration": 2
+    }
+  ]
+}

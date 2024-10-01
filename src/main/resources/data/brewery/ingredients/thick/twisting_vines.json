@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:twisting_vines",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "corruption"
+    }
+  ]
+}

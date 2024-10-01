@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:red_mushroom",
+  "base": "stew",
+
+  "effects": [
+    {
+      "type": "duration",
+      "multiplier": 2.0
+    }
+  ]
+}

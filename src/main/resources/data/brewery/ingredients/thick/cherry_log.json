@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:cherry_log",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "alteration"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:soul_soil",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:wither",
+      "duration": 600
+    }
+  ]
+}

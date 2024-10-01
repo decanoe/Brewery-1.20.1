@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:lime_wool",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:slowness"
+    }
+  ]
+}

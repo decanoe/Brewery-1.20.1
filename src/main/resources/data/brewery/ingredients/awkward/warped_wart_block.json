@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:warped_wart_block",
+  "base": "awkward",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:poison",
+      "duration": 400,
+      "amplifier": 1
+    }
+  ]
+}

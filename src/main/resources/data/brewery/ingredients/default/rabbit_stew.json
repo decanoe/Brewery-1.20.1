@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:rabbit_stew",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:saturation",
+      "duration": 1
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:large_fern",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:night_vision",
+      "duration": 600
+    }
+  ]
+}

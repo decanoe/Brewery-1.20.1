@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:sponge",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:water_breathing",
+      "duration": 9600
+    }
+  ]
+}

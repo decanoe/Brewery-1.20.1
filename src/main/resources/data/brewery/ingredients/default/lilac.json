@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:lilac",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:fire_resistance",
+      "duration": 160
+    }
+  ]
+}

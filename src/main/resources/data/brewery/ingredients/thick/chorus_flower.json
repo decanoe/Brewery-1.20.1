@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:chorus_flower",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:levitation",
+      "duration": 200,
+      "amplifier": 2
+    }
+  ]
+}

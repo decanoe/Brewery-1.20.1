@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:cocoa_beans",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:nausea",
+      "duration": 200,
+      "amplifier": 3
+    }
+  ]
+}

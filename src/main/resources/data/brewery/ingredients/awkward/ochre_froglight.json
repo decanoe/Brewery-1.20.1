@@ -1,0 +1,18 @@
+{
+  "item": "minecraft:ochre_froglight",
+  "base": "awkward",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:glowing",
+      "duration": 200
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:absorption",
+      "duration": 36000,
+      "amplifier": 2
+    }
+  ]
+}

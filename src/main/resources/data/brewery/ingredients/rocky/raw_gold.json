@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:raw_gold",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:absorption",
+      "duration": 2400
+    }
+  ]
+}

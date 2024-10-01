@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:lapis_lazuli",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:luck",
+      "duration": 2400
+    }
+  ]
+}

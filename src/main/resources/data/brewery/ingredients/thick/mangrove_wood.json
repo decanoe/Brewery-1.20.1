@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:mangrove_wood",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "alteration"
+    }
+  ]
+}

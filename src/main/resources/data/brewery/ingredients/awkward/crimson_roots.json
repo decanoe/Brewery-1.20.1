@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:crimson_roots",
+  "base": "awkward",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:regeneration",
+      "duration": 600
+    }
+  ]
+}

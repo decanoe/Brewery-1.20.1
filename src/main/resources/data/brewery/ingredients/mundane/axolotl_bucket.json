@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:axolotl_bucket",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:conduit_power",
+      "duration": 2400
+    }
+  ]
+}

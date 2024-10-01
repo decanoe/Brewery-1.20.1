@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:mushroom_stem",
+  "base": "awkward",
+
+  "effects": [
+    {
+      "type": "duration",
+      "multiplier": 2.0
+    }
+  ]
+}

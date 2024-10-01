@@ -1,0 +1,16 @@
+{
+  "item": "minecraft:skeleton_skull",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:weakness",
+      "duration": 600
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:slowness",
+      "duration": 600
+    }
+  ]
+}

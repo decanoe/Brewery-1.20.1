@@ -1,0 +1,19 @@
+{
+  "item": "minecraft:pitcher_plant",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:haste",
+      "duration": 2400,
+      "amplifier": 1
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:health_boost",
+      "duration": 600,
+      "amplifier": 2
+    }
+  ]
+}

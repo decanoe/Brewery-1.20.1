@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:rotten_flesh",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:hunger",
+      "duration": 1200
+    }
+  ]
+}

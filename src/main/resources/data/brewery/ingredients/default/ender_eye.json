@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:ender_eye",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:invisibility",
+      "duration": 200
+    }
+  ]
+}

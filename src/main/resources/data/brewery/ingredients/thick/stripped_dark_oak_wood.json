@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:stripped_dark_oak_wood",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "corruption"
+    }
+  ]
+}

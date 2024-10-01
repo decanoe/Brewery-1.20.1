@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:hanging_roots",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "amplifier"
+    }
+  ]
+}

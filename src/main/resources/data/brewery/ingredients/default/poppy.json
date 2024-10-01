@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:poppy",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:night_vision"
+    }
+  ]
+}

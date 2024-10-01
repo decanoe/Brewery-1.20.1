@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:golden_carrot",
+  "base": "awkward",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:night_vision",
+      "duration": 3600
+    }
+  ]
+}

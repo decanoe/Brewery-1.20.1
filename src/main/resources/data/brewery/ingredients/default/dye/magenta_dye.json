@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:magenta_dye",
+
+  "effects": [
+    {
+      "type": "color",
+      "color": "ffa9309f"
+    }
+  ]
+}

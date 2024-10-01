@@ -1,0 +1,9 @@
+{
+  "item": "minecraft:clock",
+
+  "effects": [
+    {
+      "type": "amplifier"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:weeping_vines",
+
+  "effects": [
+    {
+      "type": "alteration"
+    },
+    {
+      "type": "duration",
+      "multiplier": 0.75
+    }
+  ]
+}

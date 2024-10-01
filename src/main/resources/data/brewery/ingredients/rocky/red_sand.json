@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:red_sand",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:instant_health"
+    }
+  ]
+}

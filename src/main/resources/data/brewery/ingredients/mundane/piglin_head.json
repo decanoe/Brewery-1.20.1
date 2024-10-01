@@ -1,0 +1,18 @@
+{
+  "item": "minecraft:piglin_head",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:fire_resistance",
+      "duration": 2400
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:strength",
+      "duration": 2400,
+      "amplifier": 1
+    }
+  ]
+}

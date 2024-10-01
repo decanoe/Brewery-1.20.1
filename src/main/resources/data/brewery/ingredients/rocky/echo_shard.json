@@ -1,0 +1,33 @@
+{
+  "item": "minecraft:echo_shard",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:darkness",
+      "duration": 9600
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:slowness",
+      "duration": 9600,
+      "amplifier": 3
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:strength",
+      "duration": 9600,
+      "amplifier": 3
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:resistance",
+      "duration": 9600,
+      "amplifier": 3
+    },
+    {
+      "type": "enchantment_glint"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "item": "minecraft:rabbit_hide",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:resistance",
+      "duration": 7200
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:speed",
+      "duration": 7200
+    }
+  ]
+}

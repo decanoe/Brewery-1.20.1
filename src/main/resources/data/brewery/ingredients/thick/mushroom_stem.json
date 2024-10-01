@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:mushroom_stem",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "invert_cure"
+    }
+  ]
+}

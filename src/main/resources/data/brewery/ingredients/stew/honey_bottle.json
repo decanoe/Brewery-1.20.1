@@ -1,11 +1,18 @@
 {
   "item": "minecraft:honey_bottle",
   "base": "stew",
+
   "effects": [
     {
       "type": "effect",
       "effect": "minecraft:instant_health",
       "duration": 1
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:instant_health",
+      "duration": 1,
+      "amplifier": 1
     }
   ]
 }

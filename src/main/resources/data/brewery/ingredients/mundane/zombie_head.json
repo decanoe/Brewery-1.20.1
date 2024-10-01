@@ -1,0 +1,18 @@
+{
+  "item": "minecraft:zombie_head",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:hunger",
+      "duration": 2400
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:bad_omen",
+      "duration": 2400,
+      "amplifier": 1
+    }
+  ]
+}

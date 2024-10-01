@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:pufferfish_bucket",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:water_breathing",
+      "duration": 2400
+    }
+  ]
+}

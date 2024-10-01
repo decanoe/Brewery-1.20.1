@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:sandstone",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:hunger",
+      "duration": 600
+    }
+  ]
+}

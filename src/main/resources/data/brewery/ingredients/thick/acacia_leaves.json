@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:acacia_leaves",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:haste",
+      "duration": 2400
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "item": "minecraft:enchanted_golden_apple",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:saturation",
+      "duration": 600
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:health_boost",
+      "duration": 72000
+    }
+  ]
+}

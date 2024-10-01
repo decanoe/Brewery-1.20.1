@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:warped_roots",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "alteration"
+    }
+  ]
+}

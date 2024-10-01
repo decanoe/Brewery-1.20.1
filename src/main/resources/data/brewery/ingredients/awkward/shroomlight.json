@@ -1,0 +1,17 @@
+{
+  "item": "minecraft:shroomlight",
+  "base": "awkward",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:glowing",
+      "duration": 200
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:glowing",
+      "duration": 2400
+    }
+  ]
+}

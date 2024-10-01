@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:sugar_cane",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:speed",
+      "duration": 400,
+      "amplifier": 3
+    }
+  ]
+}

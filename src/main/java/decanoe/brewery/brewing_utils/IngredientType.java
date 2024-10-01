@@ -1,16 +1,16 @@
 package decanoe.brewery.brewing_utils;
 
-import net.minecraft.util.Colors;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemStack.TooltipSection;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionUtil;
-import net.minecraft.entity.effect.StatusEffectInstance;
-
 import java.util.HashMap;
 import java.util.List;
 
 import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemStack.TooltipSection;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionUtil;
+import net.minecraft.registry.Registries;
+import net.minecraft.util.Colors;
 
 public class IngredientType {
     public static class IngredientEffect extends IngredientType {
@@ -27,7 +27,7 @@ public class IngredientType {
             this(effect, duration, 0);
         }
         public IngredientEffect(StatusEffect effect) {
-            this(effect, ModPotionUtils.getDuration(5));
+            this(effect, 100);
         }
 
         @Override
@@ -45,6 +45,23 @@ public class IngredientType {
             effects.add(ModPotionUtils.Effects.capEffect(new StatusEffectInstance(this.effect, this.duration, this.amplifier)));
             potion.removeSubNbt(PotionUtil.CUSTOM_POTION_EFFECTS_KEY);
             return PotionUtil.setCustomPotionEffects(potion, effects);
+        }
+
+        @Override
+        public String toJSON(int nb_tab) {
+            String tab = "";
+            for (int i = 0; i < nb_tab; i++) tab += "  ";
+            
+            String result = tab + "{\n";
+            result += tab + "  \"type\": \"effect\",\n";
+            result += tab + "  \"effect\": \"" + Registries.STATUS_EFFECT.getId(effect).toString() + "\"";
+            if (this.duration != new IngredientEffect(this.effect).duration)
+                result += ",\n" + tab + "  \"duration\": " + this.duration;
+            if (this.amplifier != 0)
+                result += ",\n" + tab + "  \"amplifier\": " + this.amplifier;
+            result += "\n" + tab + "}";
+
+            return result;
         }
     }
     public static class IngredientColor extends IngredientType {
@@ -64,6 +81,19 @@ public class IngredientType {
         public ItemStack applyEffect(ItemStack potion, ItemStack ingredient) {
             potion.getOrCreateNbt().putInt(PotionUtil.CUSTOM_POTION_COLOR_KEY, this.color);
             return potion;
+        }
+
+        @Override
+        public String toJSON(int nb_tab) {
+            String tab = "";
+            for (int i = 0; i < nb_tab; i++) tab += "  ";
+            
+            String result = tab + "{\n";
+            result += tab + "  \"type\": \"color\",\n";
+            result += tab + "  \"color\": \"" + Integer.toHexString(color) + "\"\n";
+            result += tab + "}";
+
+            return result;
         }
     }
     public static class IngredientDuration extends IngredientType {
@@ -96,6 +126,19 @@ public class IngredientType {
             potion.removeSubNbt(PotionUtil.CUSTOM_POTION_EFFECTS_KEY);
             return PotionUtil.setCustomPotionEffects(potion, effects);
         }
+        
+        @Override
+        public String toJSON(int nb_tab) {
+            String tab = "";
+            for (int i = 0; i < nb_tab; i++) tab += "  ";
+            
+            String result = tab + "{\n";
+            result += tab + "  \"type\": \"duration\",\n";
+            result += tab + "  \"multiplier\": " + mult + "\n";
+            result += tab + "}";
+
+            return result;
+        }
     }
     public static class IngredientInfinite extends IngredientType {
         @Override
@@ -115,6 +158,18 @@ public class IngredientType {
             
             potion.removeSubNbt(PotionUtil.CUSTOM_POTION_EFFECTS_KEY);
             return PotionUtil.setCustomPotionEffects(potion, effects);
+        }
+        
+        @Override
+        public String toJSON(int nb_tab) {
+            String tab = "";
+            for (int i = 0; i < nb_tab; i++) tab += "  ";
+            
+            String result = tab + "{\n";
+            result += tab + "  \"type\": \"duration_infinite\"\n";
+            result += tab + "}";
+
+            return result;
         }
     }
     public static class IngredientAmplifier extends IngredientType {
@@ -136,6 +191,18 @@ public class IngredientType {
             potion.removeSubNbt(PotionUtil.CUSTOM_POTION_EFFECTS_KEY);
             return PotionUtil.setCustomPotionEffects(potion, effects);
         }
+        
+        @Override
+        public String toJSON(int nb_tab) {
+            String tab = "";
+            for (int i = 0; i < nb_tab; i++) tab += "  ";
+            
+            String result = tab + "{\n";
+            result += tab + "  \"type\": \"amplifier\"\n";
+            result += tab + "}";
+
+            return result;
+        }
     }
     public static class IngredientCorruption extends IngredientType {
         @Override
@@ -155,6 +222,18 @@ public class IngredientType {
             
             potion.removeSubNbt(PotionUtil.CUSTOM_POTION_EFFECTS_KEY);
             return PotionUtil.setCustomPotionEffects(potion, effects);
+        }
+        
+        @Override
+        public String toJSON(int nb_tab) {
+            String tab = "";
+            for (int i = 0; i < nb_tab; i++) tab += "  ";
+            
+            String result = tab + "{\n";
+            result += tab + "  \"type\": \"corruption\"\n";
+            result += tab + "}";
+
+            return result;
         }
     }
     public static class IngredientAlteration extends IngredientType {
@@ -176,6 +255,18 @@ public class IngredientType {
             potion.removeSubNbt(PotionUtil.CUSTOM_POTION_EFFECTS_KEY);
             return PotionUtil.setCustomPotionEffects(potion, effects);
         }
+        
+        @Override
+        public String toJSON(int nb_tab) {
+            String tab = "";
+            for (int i = 0; i < nb_tab; i++) tab += "  ";
+            
+            String result = tab + "{\n";
+            result += tab + "  \"type\": \"alteration\"\n";
+            result += tab + "}";
+
+            return result;
+        }
     }
     public static class IngredientCure extends IngredientType {
         @Override
@@ -191,6 +282,18 @@ public class IngredientType {
             potion.removeSubNbt(PotionUtil.CUSTOM_POTION_EFFECTS_KEY);
             return PotionUtil.setCustomPotionEffects(potion, effects);
         }
+        
+        @Override
+        public String toJSON(int nb_tab) {
+            String tab = "";
+            for (int i = 0; i < nb_tab; i++) tab += "  ";
+            
+            String result = tab + "{\n";
+            result += tab + "  \"type\": \"cure\"\n";
+            result += tab + "}";
+
+            return result;
+        }
     }
     public static class IngredientInvertCure extends IngredientType {
         @Override
@@ -205,6 +308,18 @@ public class IngredientType {
             
             potion.removeSubNbt(PotionUtil.CUSTOM_POTION_EFFECTS_KEY);
             return PotionUtil.setCustomPotionEffects(potion, effects);
+        }
+        
+        @Override
+        public String toJSON(int nb_tab) {
+            String tab = "";
+            for (int i = 0; i < nb_tab; i++) tab += "  ";
+            
+            String result = tab + "{\n";
+            result += tab + "  \"type\": \"invert_cure\"\n";
+            result += tab + "}";
+
+            return result;
         }
     }
     public static class IngredientHideEffect extends IngredientType {
@@ -228,6 +343,18 @@ public class IngredientType {
             potion.addHideFlag(TooltipSection.ADDITIONAL);
             return PotionUtil.setCustomPotionEffects(potion, effects);
         }
+        
+        @Override
+        public String toJSON(int nb_tab) {
+            String tab = "";
+            for (int i = 0; i < nb_tab; i++) tab += "  ";
+            
+            String result = tab + "{\n";
+            result += tab + "  \"type\": \"hide_effect\"\n";
+            result += tab + "}";
+
+            return result;
+        }
     }
     public static class IngredientShowRecipe extends IngredientType {
         @Override
@@ -235,12 +362,36 @@ public class IngredientType {
             potion.getOrCreateNbt().putBoolean("show_recipe", true);
             return potion;
         }
+        
+        @Override
+        public String toJSON(int nb_tab) {
+            String tab = "";
+            for (int i = 0; i < nb_tab; i++) tab += "  ";
+            
+            String result = tab + "{\n";
+            result += tab + "  \"type\": \"show_recipe\"\n";
+            result += tab + "}";
+
+            return result;
+        }
     }
     public static class IngredientGlint extends IngredientType {
         @Override
         public ItemStack applyEffect(ItemStack potion, ItemStack ingredient) {
             potion.getOrCreateNbt().putBoolean("ench_glint", true);
             return potion;
+        }
+        
+        @Override
+        public String toJSON(int nb_tab) {
+            String tab = "";
+            for (int i = 0; i < nb_tab; i++) tab += "  ";
+            
+            String result = tab + "{\n";
+            result += tab + "  \"type\": \"enchantment_glint\"\n";
+            result += tab + "}";
+
+            return result;
         }
     }
     public static class IngredientTranfer extends IngredientType {
@@ -266,6 +417,18 @@ public class IngredientType {
             
             potion.removeSubNbt(PotionUtil.CUSTOM_POTION_EFFECTS_KEY);
             return PotionUtil.setCustomPotionEffects(potion, effects);
+        }
+        
+        @Override
+        public String toJSON(int nb_tab) {
+            String tab = "";
+            for (int i = 0; i < nb_tab; i++) tab += "  ";
+            
+            String result = tab + "{\n";
+            result += tab + "  \"type\": \"transfer\"\n";
+            result += tab + "}";
+
+            return result;
         }
     }
     public static class IngredientDurationTranfer extends IngredientType {
@@ -306,6 +469,19 @@ public class IngredientType {
             
             potion.removeSubNbt(PotionUtil.CUSTOM_POTION_EFFECTS_KEY);
             return PotionUtil.setCustomPotionEffects(potion, effects);
+        }
+        
+        @Override
+        public String toJSON(int nb_tab) {
+            String tab = "";
+            for (int i = 0; i < nb_tab; i++) tab += "  ";
+            
+            String result = tab + "{\n";
+            result += tab + "  \"type\": \"transfer_duration\",\n";
+            result += tab + "  \"multiplier\": " + mult + "\n";
+            result += tab + "}";
+
+            return result;
         }
     }
 
@@ -375,5 +551,11 @@ public class IngredientType {
     IngredientType() {}
     public ItemStack applyEffect(ItemStack potion, ItemStack ingredient) {
         return potion;
+    }
+    public String toJSON(int nb_tab) {
+        String tab = "";
+        for (int i = 0; i < nb_tab; i++) tab += "  ";
+
+        return tab + "{}";
     }
 }

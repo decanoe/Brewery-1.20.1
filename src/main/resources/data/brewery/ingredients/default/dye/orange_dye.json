@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:orange_dye",
+
+  "effects": [
+    {
+      "type": "color",
+      "color": "ffe06101"
+    }
+  ]
+}

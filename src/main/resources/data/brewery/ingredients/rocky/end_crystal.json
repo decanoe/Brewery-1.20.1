@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:end_crystal",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:night_vision",
+      "duration": 4800
+    }
+  ]
+}

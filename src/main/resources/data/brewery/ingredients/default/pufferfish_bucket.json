@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:pufferfish_bucket",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:water_breathing"
+    }
+  ]
+}

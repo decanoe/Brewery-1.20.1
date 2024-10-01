@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:cactus",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:instant_damage",
+      "duration": 1
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:wither_rose",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:wither",
+      "duration": 400,
+      "amplifier": 1
+    }
+  ]
+}

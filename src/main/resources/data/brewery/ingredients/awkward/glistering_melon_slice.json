@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:glistering_melon_slice",
+  "base": "awkward",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:instant_health",
+      "duration": 1
+    }
+  ]
+}

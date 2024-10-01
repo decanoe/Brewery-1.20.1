@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:shulker_shell",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:resistance",
+      "duration": 300,
+      "amplifier": 2
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:sugar",
+  "base": "awkward",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:speed",
+      "duration": 3600
+    }
+  ]
+}

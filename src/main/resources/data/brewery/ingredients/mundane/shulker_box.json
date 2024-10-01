@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:shulker_box",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:resistance",
+      "duration": 3600,
+      "amplifier": 2
+    }
+  ]
+}

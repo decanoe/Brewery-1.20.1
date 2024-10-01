@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:birch_wood",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "alteration"
+    }
+  ]
+}

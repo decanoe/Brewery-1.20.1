@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:black_dye",
+
+  "effects": [
+    {
+      "type": "color",
+      "color": "ff080a0f"
+    }
+  ]
+}

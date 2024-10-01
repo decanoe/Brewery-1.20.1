@@ -1,0 +1,15 @@
+{
+  "item": "minecraft:glowstone",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "amplifier"
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:glowing",
+      "duration": 2400
+    }
+  ]
+}

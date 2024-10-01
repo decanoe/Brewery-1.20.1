@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:deepslate_redstone_ore",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "duration",
+      "multiplier": 2.0
+    }
+  ]
+}

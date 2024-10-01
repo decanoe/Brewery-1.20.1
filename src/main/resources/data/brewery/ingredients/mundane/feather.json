@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:feather",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:slow_falling",
+      "duration": 3600
+    }
+  ]
+}

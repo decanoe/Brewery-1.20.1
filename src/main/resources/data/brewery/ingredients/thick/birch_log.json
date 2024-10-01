@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:birch_log",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "alteration"
+    }
+  ]
+}

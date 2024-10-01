@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:wet_sponge",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:fire_resistance"
+    }
+  ]
+}

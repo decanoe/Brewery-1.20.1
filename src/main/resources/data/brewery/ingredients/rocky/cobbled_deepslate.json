@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:cobbled_deepslate",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:mining_fatigue",
+      "duration": 2400
+    }
+  ]
+}

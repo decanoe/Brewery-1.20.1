@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:pufferfish",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:poison",
+      "duration": 1600
+    }
+  ]
+}

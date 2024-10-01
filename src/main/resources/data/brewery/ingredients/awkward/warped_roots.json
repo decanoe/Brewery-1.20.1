@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:warped_roots",
+  "base": "awkward",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:water_breathing",
+      "duration": 600
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:warped_fungus",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "alteration"
+    }
+  ]
+}

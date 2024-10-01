@@ -1,0 +1,16 @@
+{
+  "item": "minecraft:light_gray_terracotta",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:weakness",
+      "duration": 1200
+    },
+    {
+      "type": "color",
+      "color": "ff7d7d73"
+    }
+  ]
+}

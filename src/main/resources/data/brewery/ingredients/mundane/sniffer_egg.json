@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:sniffer_egg",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:resistance",
+      "duration": 200,
+      "amplifier": 4
+    }
+  ]
+}

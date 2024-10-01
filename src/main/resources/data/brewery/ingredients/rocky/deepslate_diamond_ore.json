@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:deepslate_diamond_ore",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "amplifier"
+    }
+  ]
+}

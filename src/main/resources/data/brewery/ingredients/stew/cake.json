@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:cake",
+  "base": "stew",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:saturation",
+      "duration": 7200,
+      "amplifier": 1
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:spider_eye",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:poison"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:sculk_vein",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:darkness",
+      "duration": 900
+    }
+  ]
+}

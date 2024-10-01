@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:salmon",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:saturation",
+      "duration": 300
+    }
+  ]
+}

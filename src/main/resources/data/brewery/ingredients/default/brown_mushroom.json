@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:brown_mushroom",
+
+  "effects": [
+    {
+      "type": "invert_cure"
+    },
+    {
+      "type": "duration",
+      "multiplier": 0.75
+    }
+  ]
+}

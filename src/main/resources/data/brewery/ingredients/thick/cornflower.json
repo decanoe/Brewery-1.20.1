@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:cornflower",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:jump_boost",
+      "duration": 600,
+      "amplifier": 1
+    }
+  ]
+}

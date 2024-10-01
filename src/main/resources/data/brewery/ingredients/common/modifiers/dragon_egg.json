@@ -1,8 +1,0 @@
-{
-  "item": "minecraft:dragon_egg",
-  "effects": [
-    {
-      "type": "duration_infinite"
-    }
-  ]
-}

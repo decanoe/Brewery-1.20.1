@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:nether_quartz_ore",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:speed",
+      "duration": 2400
+    }
+  ]
+}

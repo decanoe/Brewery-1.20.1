@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:rabbit_foot",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:jump_boost",
+      "duration": 3500,
+      "amplifier": 2
+    }
+  ]
+}

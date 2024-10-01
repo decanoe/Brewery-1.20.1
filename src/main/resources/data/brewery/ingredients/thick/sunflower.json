@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:sunflower",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:saturation",
+      "duration": 30,
+      "amplifier": 1
+    }
+  ]
+}

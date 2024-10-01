@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:conduit",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:conduit_power",
+      "duration": 36000
+    }
+  ]
+}

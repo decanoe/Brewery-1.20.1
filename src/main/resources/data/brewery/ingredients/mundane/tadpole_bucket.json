@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:tadpole_bucket",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:jump_boost",
+      "duration": 2400
+    }
+  ]
+}

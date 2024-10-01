@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:lily_of_the_valley",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:poison",
+      "duration": 240
+    }
+  ]
+}

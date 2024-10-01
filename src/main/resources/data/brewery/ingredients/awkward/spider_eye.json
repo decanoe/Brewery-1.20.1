@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:spider_eye",
+  "base": "awkward",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:poison",
+      "duration": 900
+    }
+  ]
+}

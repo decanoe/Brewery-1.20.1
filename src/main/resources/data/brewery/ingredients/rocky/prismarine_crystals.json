@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:prismarine_crystals",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:dolphins_grace",
+      "duration": 8400
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:jungle_wood",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "alteration"
+    }
+  ]
+}

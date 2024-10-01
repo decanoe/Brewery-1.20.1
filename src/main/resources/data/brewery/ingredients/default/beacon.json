@@ -1,0 +1,36 @@
+{
+  "item": "minecraft:beacon",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:speed",
+      "duration": 600
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:resistance",
+      "duration": 600
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:strength",
+      "duration": 600
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:jump_boost",
+      "duration": 600
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:haste",
+      "duration": 600
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:regeneration",
+      "duration": 600
+    }
+  ]
+}

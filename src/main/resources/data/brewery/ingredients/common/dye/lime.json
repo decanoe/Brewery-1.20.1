@@ -1,9 +1,0 @@
-{
-  "item": "minecraft:lime_dye",
-  "effects": [
-    {
-      "type": "color",
-      "color": "#5ea918"
-    }
-  ]
-}

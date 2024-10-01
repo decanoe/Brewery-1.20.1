@@ -1,0 +1,16 @@
+{
+  "item": "minecraft:pink_terracotta",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:weakness",
+      "duration": 1200
+    },
+    {
+      "type": "color",
+      "color": "ffd5658f"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:red_mushroom_block",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "invert_cure"
+    }
+  ]
+}

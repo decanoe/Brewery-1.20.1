@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:salmon_bucket",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:dolphins_grace"
+    }
+  ]
+}

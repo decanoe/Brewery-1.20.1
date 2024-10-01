@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:sweet_berries",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:saturation",
+      "duration": 1
+    }
+  ]
+}

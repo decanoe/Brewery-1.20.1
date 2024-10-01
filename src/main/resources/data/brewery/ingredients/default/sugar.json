@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:sugar",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:speed"
+    }
+  ]
+}

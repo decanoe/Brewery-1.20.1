@@ -1,0 +1,9 @@
+{
+  "item": "minecraft:tinted_glass",
+
+  "effects": [
+    {
+      "type": "hide_effect"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:crimson_roots",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "corruption"
+    }
+  ]
+}

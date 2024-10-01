@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:honeycomb",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "amplifier"
+    }
+  ]
+}

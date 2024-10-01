@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:clay",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:blindness",
+      "duration": 200
+    }
+  ]
+}

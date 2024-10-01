@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:pink_dye",
+
+  "effects": [
+    {
+      "type": "color",
+      "color": "ffd5658f"
+    }
+  ]
+}

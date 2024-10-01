@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:nether_gold_ore",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:absorption",
+      "duration": 1200
+    }
+  ]
+}

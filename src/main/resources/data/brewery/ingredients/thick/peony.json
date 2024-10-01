@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:peony",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:weakness",
+      "duration": 800,
+      "amplifier": 1
+    }
+  ]
+}

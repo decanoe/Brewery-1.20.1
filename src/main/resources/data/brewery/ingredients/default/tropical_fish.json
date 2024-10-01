@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:tropical_fish",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:strength"
+    }
+  ]
+}

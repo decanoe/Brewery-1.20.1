@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:ink_sac",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:blindness",
+      "duration": 1600
+    }
+  ]
+}

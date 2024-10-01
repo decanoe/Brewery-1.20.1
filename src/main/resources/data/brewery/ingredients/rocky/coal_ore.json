@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:coal_ore",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:weakness",
+      "duration": 600
+    }
+  ]
+}

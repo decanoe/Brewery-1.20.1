@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:tube_coral_block",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:speed",
+      "duration": 4800
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:black_wool",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:slowness"
+    }
+  ]
+}

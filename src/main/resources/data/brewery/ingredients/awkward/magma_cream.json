@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:magma_cream",
+  "base": "awkward",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:fire_resistance",
+      "duration": 3600
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "item": "minecraft:creeper_head",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:instant_damage",
+      "duration": 1
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:resistance",
+      "duration": 600
+    }
+  ]
+}

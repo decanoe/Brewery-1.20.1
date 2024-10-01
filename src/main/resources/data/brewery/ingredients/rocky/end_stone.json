@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:end_stone",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:levitation",
+      "duration": 600
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:charcoal",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:wither",
+      "duration": 600
+    }
+  ]
+}

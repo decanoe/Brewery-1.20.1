@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:acacia_wood",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "alteration"
+    }
+  ]
+}

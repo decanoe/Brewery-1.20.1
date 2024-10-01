@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:red_dye",
+
+  "effects": [
+    {
+      "type": "color",
+      "color": "ff8e2121"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:jungle_log",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "alteration"
+    }
+  ]
+}

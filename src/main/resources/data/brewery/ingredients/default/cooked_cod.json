@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:cooked_cod",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:saturation",
+      "duration": 1
+    }
+  ]
+}

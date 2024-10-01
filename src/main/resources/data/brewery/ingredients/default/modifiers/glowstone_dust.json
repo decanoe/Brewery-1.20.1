@@ -1,0 +1,9 @@
+{
+  "item": "minecraft:glowstone_dust",
+
+  "effects": [
+    {
+      "type": "amplifier"
+    }
+  ]
+}

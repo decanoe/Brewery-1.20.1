@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:warped_fungus",
+  "base": "awkward",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:invisibility",
+      "duration": 600
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:glow_ink_sac",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:glowing"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:melon_slice",
+  "base": "stew",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:saturation",
+      "duration": 1200
+    }
+  ]
+}

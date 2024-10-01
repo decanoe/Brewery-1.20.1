@@ -1,0 +1,18 @@
+{
+  "item": "minecraft:turtle_egg",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:resistance",
+      "duration": 2400,
+      "amplifier": 1
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:slowness",
+      "duration": 600
+    }
+  ]
+}

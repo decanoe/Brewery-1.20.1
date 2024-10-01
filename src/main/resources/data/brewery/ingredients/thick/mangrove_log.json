@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:mangrove_log",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "alteration"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:popped_chorus_fruit",
+  "base": "stew",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:levitation",
+      "duration": 60,
+      "amplifier": 5
+    }
+  ]
+}

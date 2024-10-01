@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:leather",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:resistance",
+      "duration": 7200
+    }
+  ]
+}

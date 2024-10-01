@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:slime_ball",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:jump_boost",
+      "duration": 7200
+    }
+  ]
+}

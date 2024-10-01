@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:muddy_mangrove_roots",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "amplifier"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:azalea",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:absorption",
+      "duration": 1200,
+      "amplifier": 2
+    }
+  ]
+}

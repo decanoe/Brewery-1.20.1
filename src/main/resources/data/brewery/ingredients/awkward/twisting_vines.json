@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:twisting_vines",
+  "base": "awkward",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:levitation"
+    }
+  ]
+}

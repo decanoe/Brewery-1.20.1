@@ -1,11 +1,15 @@
 package decanoe.brewery.brewing_utils;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 import java.util.Map.Entry;
 
 import decanoe.brewery.Brewery;
 import decanoe.brewery.brewing_utils.IngredientType.*;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -142,7 +146,7 @@ public class ModPotionUtils {
             register(ingredient, List.of(effects));
         }
 
-        private static void registerDyes() {
+        @SuppressWarnings("unused") private static void registerDyes() {
             register(Items.WHITE_DYE, new IngredientColor(0xffcfd5d6));
             register(Items.ORANGE_DYE, new IngredientColor(0xffe06101));
             register(Items.MAGENTA_DYE, new IngredientColor(0xffa9309f));
@@ -160,8 +164,7 @@ public class ModPotionUtils {
             register(Items.RED_DYE, new IngredientColor(0xff8e2121));
             register(Items.BLACK_DYE, new IngredientColor(0xff080a0f));
         }
-
-        private static void registerUniversalModifier() {
+        @SuppressWarnings("unused") private static void registerUniversalModifier() {
             register(Items.REDSTONE, new IngredientDuration(1.25f));
             register(Items.COMPASS, new IngredientDuration(2));
             register(Items.RECOVERY_COMPASS, new IngredientInfinite(), new IngredientGlint());
@@ -186,7 +189,7 @@ public class ModPotionUtils {
 
             register(Items.EXPERIENCE_BOTTLE, new IngredientGlint());
         }
-        private static void registerDefault() {
+        @SuppressWarnings("unused") private static void registerDefault() {
             //#region FOOD
 
             // raw meat
@@ -359,7 +362,7 @@ public class ModPotionUtils {
                 new IngredientEffect(StatusEffects.REGENERATION, getDuration(30)));
             //#endregion
         }
-        private static void registerStewIngredients() {
+        @SuppressWarnings("unused") private static void registerStewIngredients() {
             //#region FOOD
 
             // raw meat
@@ -406,14 +409,14 @@ public class ModPotionUtils {
             //#endregion
             //#region MUSHROOM
             for (Item item : List.of(Items.MUSHROOM_STEM, Items.BROWN_MUSHROOM, Items.BROWN_MUSHROOM_BLOCK, Items.RED_MUSHROOM, Items.RED_MUSHROOM_BLOCK)) {
-                register(item, new IngredientDuration(2));
+                register(item, PotionBases.STEW_BASE_POTION, new IngredientDuration(2));
             }
             //#endregion
             //#region ANIMAL
             register(Items.EGG, PotionBases.STEW_BASE_POTION, new IngredientAmplifier());
             //#endregion
         }
-        private static void registerRockyIngredients() {
+        @SuppressWarnings("unused") private static void registerRockyIngredients() {
             //#region ROCKS
             // cobble like blocs
             for (Item item : List.of(Items.COBBLESTONE, Items.COBBLED_DEEPSLATE)) {
@@ -559,31 +562,31 @@ public class ModPotionUtils {
             register(Items.TNT          , PotionBases.ROCKY_BASE_POTION, new IngredientEffect(StatusEffects.INSTANT_DAMAGE, 1, 3));
             register(Items.END_CRYSTAL  , PotionBases.ROCKY_BASE_POTION, new IngredientEffect(StatusEffects.NIGHT_VISION, getDuration(240)));
         }
-        private static void registerElixirIngredients() {
+        @SuppressWarnings("unused") private static void registerElixirIngredients() {
             //#region FLOWER
-            register(Items.ALLIUM,              new IngredientEffect(StatusEffects.FIRE_RESISTANCE, getDuration(30)));
-            register(Items.AZURE_BLUET,         new IngredientEffect(StatusEffects.BLINDNESS,       getDuration(20)));
-            register(Items.BLUE_ORCHID,         new IngredientEffect(StatusEffects.SATURATION,      getDuration(0.35f), 1));
-            register(Items.DANDELION,           new IngredientEffect(StatusEffects.SATURATION,      getDuration(0.35f), 1));
-            register(Items.CORNFLOWER,          new IngredientEffect(StatusEffects.JUMP_BOOST,      getDuration(30), 1));
-            register(Items.LILY_OF_THE_VALLEY,  new IngredientEffect(StatusEffects.POISON,          getDuration(30), 1));
-            register(Items.OXEYE_DAISY,         new IngredientEffect(StatusEffects.REGENERATION,    getDuration(20), 1));
-            register(Items.POPPY,               new IngredientEffect(StatusEffects.NIGHT_VISION,    getDuration(30)));
-            register(Items.TORCHFLOWER,         new IngredientEffect(StatusEffects.NIGHT_VISION,    getDuration(30)));
-            register(Items.PINK_TULIP,          new IngredientEffect(StatusEffects.WEAKNESS,        getDuration(20), 1));
-            register(Items.RED_TULIP,           new IngredientEffect(StatusEffects.WEAKNESS,        getDuration(20), 1));
-            register(Items.ORANGE_TULIP,        new IngredientEffect(StatusEffects.WEAKNESS,        getDuration(20), 1));
-            register(Items.WHITE_TULIP,         new IngredientEffect(StatusEffects.WEAKNESS,        getDuration(20), 1));
-            register(Items.WITHER_ROSE,         new IngredientEffect(StatusEffects.WITHER,          getDuration(20), 1));
+            register(Items.ALLIUM,              Potions.THICK, new IngredientEffect(StatusEffects.FIRE_RESISTANCE, getDuration(30)));
+            register(Items.AZURE_BLUET,         Potions.THICK, new IngredientEffect(StatusEffects.BLINDNESS,       getDuration(20)));
+            register(Items.BLUE_ORCHID,         Potions.THICK, new IngredientEffect(StatusEffects.SATURATION,      getDuration(0.35f), 1));
+            register(Items.DANDELION,           Potions.THICK, new IngredientEffect(StatusEffects.SATURATION,      getDuration(0.35f), 1));
+            register(Items.CORNFLOWER,          Potions.THICK, new IngredientEffect(StatusEffects.JUMP_BOOST,      getDuration(30), 1));
+            register(Items.LILY_OF_THE_VALLEY,  Potions.THICK, new IngredientEffect(StatusEffects.POISON,          getDuration(30), 1));
+            register(Items.OXEYE_DAISY,         Potions.THICK, new IngredientEffect(StatusEffects.REGENERATION,    getDuration(20), 1));
+            register(Items.POPPY,               Potions.THICK, new IngredientEffect(StatusEffects.NIGHT_VISION,    getDuration(30)));
+            register(Items.TORCHFLOWER,         Potions.THICK, new IngredientEffect(StatusEffects.NIGHT_VISION,    getDuration(30)));
+            register(Items.PINK_TULIP,          Potions.THICK, new IngredientEffect(StatusEffects.WEAKNESS,        getDuration(20), 1));
+            register(Items.RED_TULIP,           Potions.THICK, new IngredientEffect(StatusEffects.WEAKNESS,        getDuration(20), 1));
+            register(Items.ORANGE_TULIP,        Potions.THICK, new IngredientEffect(StatusEffects.WEAKNESS,        getDuration(20), 1));
+            register(Items.WHITE_TULIP,         Potions.THICK, new IngredientEffect(StatusEffects.WEAKNESS,        getDuration(20), 1));
+            register(Items.WITHER_ROSE,         Potions.THICK, new IngredientEffect(StatusEffects.WITHER,          getDuration(20), 1));
 
-            register(Items.LILAC,               new IngredientEffect(StatusEffects.FIRE_RESISTANCE, getDuration(45)));
-            register(Items.PEONY,               new IngredientEffect(StatusEffects.WEAKNESS,        getDuration(40), 1));
-            register(Items.PITCHER_PLANT,       new IngredientEffect(StatusEffects.HASTE,           getDuration(120), 1));
-            register(Items.ROSE_BUSH,           new IngredientEffect(StatusEffects.POISON,          getDuration(35), 1));
-            register(Items.SUNFLOWER,           new IngredientEffect(StatusEffects.SATURATION,      getDuration(1.5f), 1));
+            register(Items.LILAC,               Potions.THICK, new IngredientEffect(StatusEffects.FIRE_RESISTANCE, getDuration(45)));
+            register(Items.PEONY,               Potions.THICK, new IngredientEffect(StatusEffects.WEAKNESS,        getDuration(40), 1));
+            register(Items.PITCHER_PLANT,       Potions.THICK, new IngredientEffect(StatusEffects.HASTE,           getDuration(120), 1));
+            register(Items.ROSE_BUSH,           Potions.THICK, new IngredientEffect(StatusEffects.POISON,          getDuration(35), 1));
+            register(Items.SUNFLOWER,           Potions.THICK, new IngredientEffect(StatusEffects.SATURATION,      getDuration(1.5f), 1));
 
-            register(Items.SPORE_BLOSSOM,       new IngredientEffect(StatusEffects.SLOWNESS,        getDuration(20), 1));
-            register(Items.CHORUS_FLOWER,       new IngredientEffect(StatusEffects.LEVITATION,      getDuration(10), 2));
+            register(Items.SPORE_BLOSSOM,       Potions.THICK, new IngredientEffect(StatusEffects.SLOWNESS,        getDuration(20), 1));
+            register(Items.CHORUS_FLOWER,       Potions.THICK, new IngredientEffect(StatusEffects.LEVITATION,      getDuration(10), 2));
             //#endregion
             
             //#region NATURE
@@ -699,17 +702,17 @@ public class ModPotionUtils {
         
             //#region MUSHROOM
             for (Item item : List.of(Items.CRIMSON_FUNGUS, Items.CRIMSON_ROOTS, Items.TWISTING_VINES, Items.NETHER_WART, Items.NETHER_WART_BLOCK)) {
-                register(item, new IngredientCorruption());
+                register(item, Potions.THICK, new IngredientCorruption());
             }
             for (Item item : List.of(Items.WARPED_FUNGUS, Items.WARPED_ROOTS, Items.WEEPING_VINES, Items.WARPED_WART_BLOCK, Items.NETHER_SPROUTS)) {
-                register(item, new IngredientAlteration());
+                register(item, Potions.THICK, new IngredientAlteration());
             }
             for (Item item : List.of(Items.MUSHROOM_STEM, Items.BROWN_MUSHROOM, Items.BROWN_MUSHROOM_BLOCK, Items.RED_MUSHROOM, Items.RED_MUSHROOM_BLOCK)) {
-                register(item, new IngredientInvertCure());
+                register(item, Potions.THICK, new IngredientInvertCure());
             }
             //#endregion
         }
-        private static void registerAwkwardIngredients() {
+        @SuppressWarnings("unused") private static void registerAwkwardIngredients() {
             //#region MUSHROOM
             register(Items.CRIMSON_ROOTS            , Potions.AWKWARD, new IngredientEffect(StatusEffects.REGENERATION, getDuration(30)));
             register(Items.WEEPING_VINES            , Potions.AWKWARD, new IngredientEffect(StatusEffects.INSTANT_DAMAGE, 1));
@@ -745,14 +748,14 @@ public class ModPotionUtils {
             register(Items.SCULK_VEIN               , Potions.AWKWARD, new IngredientEffect(StatusEffects.DARKNESS, getDuration(45)));
             //#endregion
             //#region MOB
-            register(Items.BLAZE_ROD, new IngredientEffect(StatusEffects.STRENGTH, 3600, 1));
+            register(Items.BLAZE_ROD, Potions.AWKWARD, new IngredientEffect(StatusEffects.STRENGTH, 3600*2));
             
-            register(Items.ROTTEN_FLESH, new IngredientEffect(StatusEffects.HUNGER, getDuration(120)));
+            register(Items.ROTTEN_FLESH, Potions.AWKWARD, new IngredientEffect(StatusEffects.HUNGER, getDuration(120)));
 
-            register(Items.SHULKER_BOX, new IngredientEffect(StatusEffects.RESISTANCE, getDuration(180), 2));
-            register(Items.SHULKER_SHELL, new IngredientEffect(StatusEffects.RESISTANCE, getDuration(120), 2));
+            register(Items.SHULKER_BOX, Potions.AWKWARD, new IngredientEffect(StatusEffects.RESISTANCE, getDuration(180), 2));
+            register(Items.SHULKER_SHELL, Potions.AWKWARD, new IngredientEffect(StatusEffects.RESISTANCE, getDuration(120), 2));
             
-            register(Items.SLIME_BALL, new IngredientEffect(StatusEffects.JUMP_BOOST, getDuration(360)));
+            register(Items.SLIME_BALL, Potions.AWKWARD, new IngredientEffect(StatusEffects.JUMP_BOOST, getDuration(360)));
             //#endregion
 
             //#region VANILLA
@@ -769,85 +772,132 @@ public class ModPotionUtils {
             register(Items.PHANTOM_MEMBRANE, Potions.AWKWARD, new IngredientEffect(StatusEffects.SLOW_FALLING, 180));
             //#endregion
         }
-        private static void registerMundaneIngredients() {
+        @SuppressWarnings("unused") private static void registerMundaneIngredients() {
             //#region ANIMAL
             for (Item item : List.of(Items.WHITE_WOOL, Items.ORANGE_WOOL, Items.MAGENTA_WOOL, Items.LIGHT_BLUE_WOOL, Items.YELLOW_WOOL, Items.LIME_WOOL, Items.PINK_WOOL, Items.GRAY_WOOL, Items.LIGHT_GRAY_WOOL, Items.CYAN_WOOL, Items.PURPLE_WOOL, Items.BLUE_WOOL, Items.BROWN_WOOL, Items.GREEN_WOOL, Items.RED_WOOL, Items.BLACK_WOOL)){
-                register(item, new IngredientEffect(StatusEffects.SLOWNESS, getDuration(60)));
+                register(item, Potions.MUNDANE, new IngredientEffect(StatusEffects.SLOWNESS, getDuration(60)));
             }
-            register(Items.STRING, new IngredientEffect(StatusEffects.SLOWNESS, getDuration(45)));
-            register(Items.COBWEB, new IngredientEffect(StatusEffects.SLOWNESS, getDuration(30), 1));
+            register(Items.STRING, Potions.MUNDANE, new IngredientEffect(StatusEffects.SLOWNESS, getDuration(45)));
+            register(Items.COBWEB, Potions.MUNDANE, new IngredientEffect(StatusEffects.SLOWNESS, getDuration(30), 1));
 
-            register(Items.AXOLOTL_BUCKET, new IngredientEffect(StatusEffects.CONDUIT_POWER, getDuration(120)));
-            register(Items.PUFFERFISH_BUCKET, new IngredientEffect(StatusEffects.WATER_BREATHING, getDuration(120)));
-            register(Items.SALMON_BUCKET, new IngredientEffect(StatusEffects.DOLPHINS_GRACE, getDuration(120)));
-            register(Items.COD_BUCKET, new IngredientEffect(StatusEffects.WEAKNESS, getDuration(120)));
-            register(Items.TROPICAL_FISH_BUCKET, new IngredientEffect(StatusEffects.FIRE_RESISTANCE, getDuration(120)));
-            register(Items.TADPOLE_BUCKET, new IngredientEffect(StatusEffects.JUMP_BOOST, getDuration(120)));
+            register(Items.AXOLOTL_BUCKET, Potions.MUNDANE, new IngredientEffect(StatusEffects.CONDUIT_POWER, getDuration(120)));
+            register(Items.PUFFERFISH_BUCKET, Potions.MUNDANE, new IngredientEffect(StatusEffects.WATER_BREATHING, getDuration(120)));
+            register(Items.SALMON_BUCKET, Potions.MUNDANE, new IngredientEffect(StatusEffects.DOLPHINS_GRACE, getDuration(120)));
+            register(Items.COD_BUCKET, Potions.MUNDANE, new IngredientEffect(StatusEffects.WEAKNESS, getDuration(120)));
+            register(Items.TROPICAL_FISH_BUCKET, Potions.MUNDANE, new IngredientEffect(StatusEffects.FIRE_RESISTANCE, getDuration(120)));
+            register(Items.TADPOLE_BUCKET, Potions.MUNDANE, new IngredientEffect(StatusEffects.JUMP_BOOST, getDuration(120)));
 
-            register(Items.TROPICAL_FISH, new IngredientEffect(StatusEffects.STRENGTH, getDuration(120)));
-            register(Items.PUFFERFISH, new IngredientEffect(StatusEffects.POISON, getDuration(80)));
-            register(Items.COD, new IngredientEffect(StatusEffects.SATURATION, getDuration(15)));
-            register(Items.SALMON, new IngredientEffect(StatusEffects.SATURATION, getDuration(15)));
-            register(Items.NAUTILUS_SHELL, new IngredientEffect(StatusEffects.CONDUIT_POWER, getDuration(120)));
-            register(Items.SCUTE, new IngredientEffect(StatusEffects.RESISTANCE, getDuration(120), 1));
+            register(Items.TROPICAL_FISH, Potions.MUNDANE, new IngredientEffect(StatusEffects.STRENGTH, getDuration(120)));
+            register(Items.PUFFERFISH, Potions.MUNDANE, new IngredientEffect(StatusEffects.POISON, getDuration(80)));
+            register(Items.COD, Potions.MUNDANE, new IngredientEffect(StatusEffects.SATURATION, getDuration(15)));
+            register(Items.SALMON, Potions.MUNDANE, new IngredientEffect(StatusEffects.SATURATION, getDuration(15)));
+            register(Items.NAUTILUS_SHELL, Potions.MUNDANE, new IngredientEffect(StatusEffects.CONDUIT_POWER, getDuration(120)));
+            register(Items.SCUTE, Potions.MUNDANE, new IngredientEffect(StatusEffects.RESISTANCE, getDuration(120), 1));
 
-            register(Items.TURTLE_HELMET, new IngredientEffect(StatusEffects.RESISTANCE, getDuration(360), 3), new IngredientEffect(StatusEffects.SLOWNESS, getDuration(120), 2));
-            register(Items.TURTLE_EGG, new IngredientEffect(StatusEffects.RESISTANCE, getDuration(120), 1), new IngredientEffect(StatusEffects.SLOWNESS, getDuration(30)));
-            register(Items.SNIFFER_EGG, new IngredientEffect(StatusEffects.RESISTANCE, getDuration(10), 4));
-            register(Items.EGG, new IngredientEffect(StatusEffects.RESISTANCE, getDuration(60)));
-            register(Items.FEATHER, new IngredientEffect(StatusEffects.SLOW_FALLING, getDuration(180)));
+            register(Items.TURTLE_HELMET, Potions.MUNDANE, new IngredientEffect(StatusEffects.RESISTANCE, getDuration(360), 3), new IngredientEffect(StatusEffects.SLOWNESS, getDuration(120), 2));
+            register(Items.TURTLE_EGG, Potions.MUNDANE, new IngredientEffect(StatusEffects.RESISTANCE, getDuration(120), 1), new IngredientEffect(StatusEffects.SLOWNESS, getDuration(30)));
+            register(Items.SNIFFER_EGG, Potions.MUNDANE, new IngredientEffect(StatusEffects.RESISTANCE, getDuration(10), 4));
+            register(Items.EGG, Potions.MUNDANE, new IngredientEffect(StatusEffects.RESISTANCE, getDuration(60)));
+            register(Items.FEATHER, Potions.MUNDANE, new IngredientEffect(StatusEffects.SLOW_FALLING, getDuration(180)));
 
-            register(Items.INK_SAC, new IngredientEffect(StatusEffects.BLINDNESS, getDuration(80)));
-            register(Items.GLOW_INK_SAC, new IngredientEffect(StatusEffects.GLOWING, getDuration(130)));
+            register(Items.INK_SAC, Potions.MUNDANE, new IngredientEffect(StatusEffects.BLINDNESS, getDuration(80)));
+            register(Items.GLOW_INK_SAC, Potions.MUNDANE, new IngredientEffect(StatusEffects.GLOWING, getDuration(130)));
 
-            register(Items.LEATHER, new IngredientEffect(StatusEffects.RESISTANCE, getDuration(360)));
-            register(Items.RABBIT_HIDE, new IngredientEffect(StatusEffects.RESISTANCE, getDuration(360)), new IngredientEffect(StatusEffects.SPEED, getDuration(360)));
-            register(Items.RABBIT_FOOT, new IngredientEffect(StatusEffects.JUMP_BOOST, getDuration(175), 2));
+            register(Items.LEATHER, Potions.MUNDANE, new IngredientEffect(StatusEffects.RESISTANCE, getDuration(360)));
+            register(Items.RABBIT_HIDE, Potions.MUNDANE, new IngredientEffect(StatusEffects.RESISTANCE, getDuration(360)), new IngredientEffect(StatusEffects.SPEED, getDuration(360)));
+            register(Items.RABBIT_FOOT, Potions.MUNDANE, new IngredientEffect(StatusEffects.JUMP_BOOST, getDuration(175), 2));
 
-            register(Items.SPONGE, new IngredientEffect(StatusEffects.WATER_BREATHING, getDuration(480)));
-            register(Items.WET_SPONGE, new IngredientEffect(StatusEffects.FIRE_RESISTANCE, getDuration(480)));
+            register(Items.SPONGE, Potions.MUNDANE, new IngredientEffect(StatusEffects.WATER_BREATHING, getDuration(480)));
+            register(Items.WET_SPONGE, Potions.MUNDANE, new IngredientEffect(StatusEffects.FIRE_RESISTANCE, getDuration(480)));
 
-            register(Items.SPIDER_EYE, new IngredientEffect(StatusEffects.POISON, getDuration(60)));
-            register(Items.GOAT_HORN, new IngredientEffect(StatusEffects.INSTANT_DAMAGE, 2));
+            register(Items.SPIDER_EYE, Potions.MUNDANE, new IngredientEffect(StatusEffects.POISON, getDuration(60)));
+            register(Items.GOAT_HORN, Potions.MUNDANE, new IngredientEffect(StatusEffects.INSTANT_DAMAGE, 2));
             //#endregion
             //#region MOB
-            register(Items.BLAZE_POWDER, new IngredientEffect(StatusEffects.STRENGTH, getDuration(120)));
-            register(Items.BLAZE_ROD, new IngredientEffect(StatusEffects.STRENGTH, getDuration(180)));
+            register(Items.BLAZE_POWDER, Potions.MUNDANE, new IngredientEffect(StatusEffects.STRENGTH, getDuration(120)));
+            register(Items.BLAZE_ROD, Potions.MUNDANE, new IngredientEffect(StatusEffects.STRENGTH, getDuration(180)));
 
-            register(Items.CREEPER_HEAD, new IngredientEffect(StatusEffects.INSTANT_DAMAGE, 2), new IngredientEffect(StatusEffects.RESISTANCE, getDuration(120), 1));
-            register(Items.DRAGON_HEAD, new IngredientEffect(StatusEffects.HEALTH_BOOST, getDuration(120), 2), new IngredientEffect(StatusEffects.SLOW_FALLING, getDuration(120)));
-            register(Items.PIGLIN_HEAD, new IngredientEffect(StatusEffects.FIRE_RESISTANCE, getDuration(120)), new IngredientEffect(StatusEffects.STRENGTH, getDuration(120), 1));
-            register(Items.SKELETON_SKULL, new IngredientEffect(StatusEffects.WEAKNESS, getDuration(120), 1), new IngredientEffect(StatusEffects.SLOWNESS, getDuration(120)));
-            register(Items.WITHER_SKELETON_SKULL, new IngredientEffect(StatusEffects.WITHER, getDuration(120)), new IngredientEffect(StatusEffects.STRENGTH, getDuration(120), 1));
-            register(Items.ZOMBIE_HEAD, new IngredientEffect(StatusEffects.HUNGER, getDuration(120)), new IngredientEffect(StatusEffects.BAD_OMEN, getDuration(120), 1));
-            register(Items.PLAYER_HEAD, new IngredientEffect(StatusEffects.HERO_OF_THE_VILLAGE, getDuration(120)), new IngredientEffect(StatusEffects.INSTANT_HEALTH, 1, 1));
+            register(Items.CREEPER_HEAD, Potions.MUNDANE, new IngredientEffect(StatusEffects.INSTANT_DAMAGE, 2), new IngredientEffect(StatusEffects.RESISTANCE, getDuration(120), 1));
+            register(Items.DRAGON_HEAD, Potions.MUNDANE, new IngredientEffect(StatusEffects.HEALTH_BOOST, getDuration(120), 2), new IngredientEffect(StatusEffects.SLOW_FALLING, getDuration(120)));
+            register(Items.PIGLIN_HEAD, Potions.MUNDANE, new IngredientEffect(StatusEffects.FIRE_RESISTANCE, getDuration(120)), new IngredientEffect(StatusEffects.STRENGTH, getDuration(120), 1));
+            register(Items.SKELETON_SKULL, Potions.MUNDANE, new IngredientEffect(StatusEffects.WEAKNESS, getDuration(120), 1), new IngredientEffect(StatusEffects.SLOWNESS, getDuration(120)));
+            register(Items.WITHER_SKELETON_SKULL, Potions.MUNDANE, new IngredientEffect(StatusEffects.WITHER, getDuration(120)), new IngredientEffect(StatusEffects.STRENGTH, getDuration(120), 1));
+            register(Items.ZOMBIE_HEAD, Potions.MUNDANE, new IngredientEffect(StatusEffects.HUNGER, getDuration(120)), new IngredientEffect(StatusEffects.BAD_OMEN, getDuration(120), 1));
+            register(Items.PLAYER_HEAD, Potions.MUNDANE, new IngredientEffect(StatusEffects.HERO_OF_THE_VILLAGE, getDuration(120)), new IngredientEffect(StatusEffects.INSTANT_HEALTH, 1, 1));
             
-            register(Items.GHAST_TEAR, new IngredientEffect(StatusEffects.REGENERATION, getDuration(360)));
-            register(Items.MAGMA_CREAM, new IngredientEffect(StatusEffects.FIRE_RESISTANCE, getDuration(360)));
-            register(Items.PHANTOM_MEMBRANE, new IngredientEffect(StatusEffects.SLOW_FALLING, getDuration(360)));
-            register(Items.ROTTEN_FLESH, new IngredientEffect(StatusEffects.HUNGER, getDuration(60)));
+            register(Items.GHAST_TEAR, Potions.MUNDANE, new IngredientEffect(StatusEffects.REGENERATION, getDuration(360)));
+            register(Items.MAGMA_CREAM, Potions.MUNDANE, new IngredientEffect(StatusEffects.FIRE_RESISTANCE, getDuration(360)));
+            register(Items.PHANTOM_MEMBRANE, Potions.MUNDANE, new IngredientEffect(StatusEffects.SLOW_FALLING, getDuration(360)));
+            register(Items.ROTTEN_FLESH, Potions.MUNDANE, new IngredientEffect(StatusEffects.HUNGER, getDuration(60)));
 
-            register(Items.SHULKER_BOX, new IngredientEffect(StatusEffects.RESISTANCE, getDuration(180), 2));
-            register(Items.SHULKER_SHELL, new IngredientEffect(StatusEffects.RESISTANCE, getDuration(120), 2));
+            register(Items.SHULKER_BOX, Potions.MUNDANE, new IngredientEffect(StatusEffects.RESISTANCE, getDuration(180), 2));
+            register(Items.SHULKER_SHELL, Potions.MUNDANE, new IngredientEffect(StatusEffects.RESISTANCE, getDuration(120), 2));
             
-            register(Items.SLIME_BALL, new IngredientEffect(StatusEffects.JUMP_BOOST, getDuration(360)));
+            register(Items.SLIME_BALL, Potions.MUNDANE, new IngredientEffect(StatusEffects.JUMP_BOOST, getDuration(360)));
             //#endregion
         }
 
+        private static void create_json(Item item, String base, List<IngredientType> ingredientTypes, String root_dir) {
+            String path = FabricLoader.getInstance().getConfigDir().resolve(
+                root_dir + Registries.ITEM.getId(item).getPath() + ".json"
+                ).toString();
+            File file = new File(path);
+
+            try {
+                file.getParentFile().mkdirs();
+                file.createNewFile();
+
+                FileWriter writer = new FileWriter(path);
+                writer.write("{\n");
+                writer.write("  \"item\": \"" + Registries.ITEM.getId(item).toString() + "\",\n");
+                if (base != "") {
+                    writer.write("  \"base\": \"" + base + "\",\n");
+                }
+                writer.write("\n");
+                writer.write("  \"effects\": [\n");
+                
+                boolean first = true;
+                for (IngredientType ingredientType : ingredientTypes) {
+                    writer.write((first?"":",\n") + ingredientType.toJSON(2));
+                    first = false;
+                }
+                
+                writer.write("\n  ]\n");
+                writer.write("}");
+                writer.close();
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        @SuppressWarnings("unused") private static void create_json(Item item, PotionIngredientMap potion_map, String root_dir, String category) {
+            if (!potion_map.default_effects.isEmpty())
+                create_json(item, "", potion_map.default_effects, root_dir + "/default/" + category);
+            
+            for (Entry<Potion, List<IngredientType>> set : potion_map.map.entrySet()) {
+                String base = "";
+                if (set.getKey() == Potions.AWKWARD) base = "awkward";
+                if (set.getKey() == Potions.MUNDANE) base = "mundane";
+                if (set.getKey() == ModPotionUtils.PotionBases.ROCKY_BASE_POTION) base = "rocky";
+                if (set.getKey() == ModPotionUtils.PotionBases.STEW_BASE_POTION) base = "stew";
+                if (set.getKey() == Potions.THICK) base = "thick";
+
+                create_json(item, base, set.getValue(), root_dir + "/" + base + "/" + category);
+            }
+        }
         private static void registerIngredients() {
             BrewingRecipeRegistry.registerItemRecipe(Items.SPLASH_POTION, Items.CHORUS_FLOWER, Items.LINGERING_POTION);
+            
+            // registerDyes();
+            // registerUniversalModifier();
+            // registerDefault();
+            // registerStewIngredients();
+            // registerRockyIngredients();
+            // registerElixirIngredients();
+            // registerAwkwardIngredients();
+            // registerMundaneIngredients();
 
-            //registerDyes();
-            //registerDefault();
-            //registerUniversalModifier();
-            //registerStewIngredients();
-            //registerRockyIngredients();
-            //registerElixirIngredients();
-            //registerAwkwardIngredients();
-            //registerMundaneIngredients();
-
-            Brewery.LOGGER.info(ingredient_map.size() + " ingredients registered, have fun !");
-            printInfos();
+            // printInfos();
         }
 
         public static void printInfos() {

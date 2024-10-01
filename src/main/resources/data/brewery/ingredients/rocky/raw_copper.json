@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:raw_copper",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:haste",
+      "duration": 2400
+    }
+  ]
+}

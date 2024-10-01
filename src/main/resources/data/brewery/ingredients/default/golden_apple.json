@@ -1,0 +1,15 @@
+{
+  "item": "minecraft:golden_apple",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:saturation"
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:absorption",
+      "duration": 200
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:axolotl_bucket",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:conduit_power"
+    }
+  ]
+}

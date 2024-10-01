@@ -1,0 +1,24 @@
+{
+  "item": "minecraft:obsidian",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:resistance",
+      "duration": 4800,
+      "amplifier": 2
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:resistance",
+      "duration": 4800,
+      "amplifier": 2
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:invisibility",
+      "duration": 4800
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:shulker_box",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:resistance",
+      "duration": 600,
+      "amplifier": 2
+    }
+  ]
+}

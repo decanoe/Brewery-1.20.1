@@ -1,0 +1,18 @@
+{
+  "item": "minecraft:creeper_head",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:instant_damage",
+      "duration": 2
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:resistance",
+      "duration": 2400,
+      "amplifier": 1
+    }
+  ]
+}

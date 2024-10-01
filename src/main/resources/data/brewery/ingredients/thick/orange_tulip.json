@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:orange_tulip",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:weakness",
+      "duration": 400,
+      "amplifier": 1
+    }
+  ]
+}

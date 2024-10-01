@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:diamond",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "amplifier"
+    }
+  ]
+}

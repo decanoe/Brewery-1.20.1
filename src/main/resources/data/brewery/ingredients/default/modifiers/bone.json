@@ -1,0 +1,9 @@
+{
+  "item": "minecraft:bone",
+
+  "effects": [
+    {
+      "type": "alteration"
+    }
+  ]
+}

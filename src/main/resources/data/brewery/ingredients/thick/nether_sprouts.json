@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:nether_sprouts",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "alteration"
+    }
+  ]
+}

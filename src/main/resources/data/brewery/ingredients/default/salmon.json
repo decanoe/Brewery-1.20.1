@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:salmon",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:nausea",
+      "duration": 1
+    }
+  ]
+}

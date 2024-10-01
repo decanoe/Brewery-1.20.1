@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:dark_oak_wood",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "alteration"
+    }
+  ]
+}

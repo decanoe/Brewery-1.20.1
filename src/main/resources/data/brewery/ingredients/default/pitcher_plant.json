@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:pitcher_plant",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:haste",
+      "duration": 480
+    }
+  ]
+}

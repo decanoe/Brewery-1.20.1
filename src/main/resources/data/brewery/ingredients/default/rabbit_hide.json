@@ -1,0 +1,14 @@
+{
+  "item": "minecraft:rabbit_hide",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:resistance"
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:speed"
+    }
+  ]
+}

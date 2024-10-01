@@ -1,0 +1,19 @@
+{
+  "item": "minecraft:turtle_helmet",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:resistance",
+      "duration": 7200,
+      "amplifier": 3
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:slowness",
+      "duration": 2400,
+      "amplifier": 2
+    }
+  ]
+}

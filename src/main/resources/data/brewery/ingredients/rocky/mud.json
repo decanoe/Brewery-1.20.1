@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:mud",
+  "base": "rocky",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:weakness",
+      "duration": 200
+    }
+  ]
+}

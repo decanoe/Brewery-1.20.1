@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:lime_wool",
+  "base": "mundane",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:slowness",
+      "duration": 1200
+    }
+  ]
+}

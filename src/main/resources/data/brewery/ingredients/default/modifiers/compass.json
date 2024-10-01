@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:compass",
+
+  "effects": [
+    {
+      "type": "duration",
+      "multiplier": 2.0
+    }
+  ]
+}

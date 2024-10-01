@@ -1,0 +1,18 @@
+{
+  "item": "minecraft:golden_carrot",
+  "base": "stew",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:saturation",
+      "duration": 2400,
+      "amplifier": 2
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:night_vision",
+      "duration": 2400
+    }
+  ]
+}

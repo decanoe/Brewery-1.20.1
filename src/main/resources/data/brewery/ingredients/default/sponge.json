@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:sponge",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:water_breathing"
+    }
+  ]
+}

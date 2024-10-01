@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:weeping_vines",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "alteration"
+    }
+  ]
+}

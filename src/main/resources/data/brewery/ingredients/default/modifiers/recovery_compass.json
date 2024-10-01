@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:recovery_compass",
+
+  "effects": [
+    {
+      "type": "duration_infinite"
+    },
+    {
+      "type": "enchantment_glint"
+    }
+  ]
+}

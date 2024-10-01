@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:rooted_dirt",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "amplifier"
+    }
+  ]
+}

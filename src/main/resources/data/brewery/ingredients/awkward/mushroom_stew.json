@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:mushroom_stew",
+  "base": "awkward",
+
+  "effects": [
+    {
+      "type": "amplifier"
+    }
+  ]
+}

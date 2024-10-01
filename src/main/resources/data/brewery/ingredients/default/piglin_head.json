@@ -1,0 +1,16 @@
+{
+  "item": "minecraft:piglin_head",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:fire_resistance",
+      "duration": 600
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:strength",
+      "duration": 600
+    }
+  ]
+}

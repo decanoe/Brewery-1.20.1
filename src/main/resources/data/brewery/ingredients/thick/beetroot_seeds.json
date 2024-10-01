@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:beetroot_seeds",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:instant_health",
+      "duration": 20
+    }
+  ]
+}

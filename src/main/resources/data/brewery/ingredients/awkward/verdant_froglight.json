@@ -1,0 +1,18 @@
+{
+  "item": "minecraft:verdant_froglight",
+  "base": "awkward",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:glowing",
+      "duration": 200
+    },
+    {
+      "type": "effect",
+      "effect": "minecraft:haste",
+      "duration": 7200,
+      "amplifier": 1
+    }
+  ]
+}

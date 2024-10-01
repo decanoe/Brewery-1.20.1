@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:cooked_chicken",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:saturation",
+      "duration": 1
+    }
+  ]
+}

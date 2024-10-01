@@ -1,0 +1,12 @@
+{
+  "item": "minecraft:rotten_flesh",
+  "base": "awkward",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:hunger",
+      "duration": 2400
+    }
+  ]
+}

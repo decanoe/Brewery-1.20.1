@@ -1,0 +1,9 @@
+{
+  "item": "minecraft:map",
+
+  "effects": [
+    {
+      "type": "show_recipe"
+    }
+  ]
+}

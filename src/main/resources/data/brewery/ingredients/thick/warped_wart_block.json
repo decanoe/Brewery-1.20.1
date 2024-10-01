@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:warped_wart_block",
+  "base": "thick",
+
+  "effects": [
+    {
+      "type": "alteration"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:poisonous_potato",
+  "base": "stew",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:poison",
+      "duration": 400,
+      "amplifier": 1
+    }
+  ]
+}

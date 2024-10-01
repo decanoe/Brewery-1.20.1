@@ -177,15 +177,15 @@ public class ReloadListener implements SimpleSynchronousResourceReloadListener {
                 return new IngredientType.IngredientCure();
             }
 
-            case "cure_invert" -> {
+            case "invert_cure" -> {
                 return new IngredientType.IngredientInvertCure();
             }
 
-            case "hide" -> {
+            case "hide_effect" -> {
                 return new IngredientType.IngredientHideEffect();
             }
 
-            case "show" -> {
+            case "show_recipe" -> {
                 return new IngredientType.IngredientShowRecipe();
             }
 

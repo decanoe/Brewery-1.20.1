@@ -1,0 +1,11 @@
+{
+  "item": "minecraft:sunflower",
+
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:saturation",
+      "duration": 30
+    }
+  ]
+}
