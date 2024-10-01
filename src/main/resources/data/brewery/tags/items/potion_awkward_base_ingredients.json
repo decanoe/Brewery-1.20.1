@@ -2,8 +2,8 @@
     "replace": false,
     "values": [
         "minecraft:brown_mushroom",
-        "red_mushroom",
-        "nether_wart_block",
+        "minecraft:red_mushroom",
+        "minecraft:nether_wart_block",
         "minecraft:warped_wart_block",
         "minecraft:nether_sprouts",
         "minecraft:warped_roots",
