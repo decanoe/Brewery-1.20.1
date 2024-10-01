@@ -6,7 +6,6 @@ import net.minecraft.item.ItemStack.TooltipSection;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.recipe.BrewingRecipeRegistry;
-import net.minecraft.registry.Registries;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionUtil;
 import net.minecraft.potion.Potions;
