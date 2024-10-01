@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:wither_rose",
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:wither",
+      "duration": 160
+    }
+  ]
+}

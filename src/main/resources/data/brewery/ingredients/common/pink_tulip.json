@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:pink_tulip",
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:weakness",
+      "duration": 180
+    }
+  ]
+}

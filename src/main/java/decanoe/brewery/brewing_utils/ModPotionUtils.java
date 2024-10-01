@@ -225,7 +225,6 @@ public class ModPotionUtils {
             register(Items.HONEY_BLOCK              , PotionBases.STEW_BASE_POTION, new IngredientEffect(StatusEffects.INSTANT_HEALTH, 1, 1));
             register(Items.HONEY_BOTTLE             , PotionBases.STEW_BASE_POTION, new IngredientEffect(StatusEffects.INSTANT_HEALTH, 1, 0));
 
-            // TODO en data jusque là
             // #endregion
             //#region FLOWER
             register(Items.ALLIUM,              new IngredientEffect(StatusEffects.FIRE_RESISTANCE, getDuration(4)));
@@ -243,6 +242,7 @@ public class ModPotionUtils {
             register(Items.WHITE_TULIP,         new IngredientEffect(StatusEffects.WEAKNESS,        getDuration(9)));
             register(Items.WITHER_ROSE,         new IngredientEffect(StatusEffects.WITHER,          getDuration(8)));
 
+            // TODO jusque la
             register(Items.LILAC,               new IngredientEffect(StatusEffects.FIRE_RESISTANCE, getDuration(8)));
             register(Items.PEONY,               new IngredientEffect(StatusEffects.WEAKNESS,        getDuration(18)));
             register(Items.PITCHER_PLANT,       new IngredientEffect(StatusEffects.HASTE,           getDuration(24)));

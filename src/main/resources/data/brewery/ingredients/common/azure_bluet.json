@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:azure_bluet",
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:blindness",
+      "duration": 160
+    }
+  ]
+}

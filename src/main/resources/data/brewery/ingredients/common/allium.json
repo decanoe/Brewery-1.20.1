@@ -1,0 +1,10 @@
+{
+  "item": "minecraft:allium",
+  "effects": [
+    {
+      "type": "effect",
+      "effect": "minecraft:fire_resistance",
+      "duration": 80
+    }
+  ]
+}
