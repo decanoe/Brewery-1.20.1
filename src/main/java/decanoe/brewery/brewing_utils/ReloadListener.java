@@ -36,7 +36,12 @@ public class ReloadListener implements SimpleSynchronousResourceReloadListener {
                 String content = new String(resource.getInputStream().readAllBytes());
                 Map<String, ?> json = new Gson().fromJson(content, Map.class);
 
-                // TODO @Decanoe json is the config Map, read the values you want in it using .get()
+                // =================================== CONFIGS ======================================
+                if (json.containsKey("MAX_INGREDIENT_COUNT"))
+                    ModPotionUtils.MAX_INGREDIENT_COUNT = (int)json.get("MAX_INGREDIENT_COUNT");
+                if (json.containsKey("MAX_EFFECT_DURATION"))
+                    ModPotionUtils.MAX_INGREDIENT_COUNT = (int)json.get("MAX_EFFECT_DURATION");
+
 
             } catch (Exception e) {
                 Brewery.LOGGER.info("Error while loading config");
