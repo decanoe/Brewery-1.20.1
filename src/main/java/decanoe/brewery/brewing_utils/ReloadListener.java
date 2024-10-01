@@ -48,6 +48,8 @@ public class ReloadListener implements SimpleSynchronousResourceReloadListener {
             }
         }
 
+        ModPotionUtils.Ingredients.clear();
+
         for (Entry<Identifier, Resource> entry : manager.findResources("ingredients", id->id.toString().endsWith(".json")).entrySet()) {
             try {
                 Brewery.LOGGER.info("Loading ingredient : " + entry.getKey().toString());

@@ -109,6 +109,10 @@ public class ModPotionUtils {
 
         private static HashMap<Item, PotionIngredientMap> ingredient_map = new HashMap<>();
 
+        public static void clear() {
+            ingredient_map.clear();
+        }
+
         public static void register(Item ingredient, Potion potion, List<IngredientType> effects) {
             if (!ingredient_map.containsKey(ingredient))
                 ingredient_map.put(ingredient, new PotionIngredientMap(List.of()));
