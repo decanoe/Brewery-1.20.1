@@ -38,15 +38,16 @@ public class ReloadListener implements SimpleSynchronousResourceReloadListener {
 
                 // =================================== CONFIGS ======================================
                 if (json.containsKey("MAX_INGREDIENT_COUNT"))
-                    ModPotionUtils.MAX_INGREDIENT_COUNT = (int)json.get("MAX_INGREDIENT_COUNT");
+                    ModPotionUtils.MAX_INGREDIENT_COUNT = toInt(json.get("MAX_INGREDIENT_COUNT"));
                 if (json.containsKey("MAX_EFFECT_DURATION"))
-                    ModPotionUtils.MAX_INGREDIENT_COUNT = (int)json.get("MAX_EFFECT_DURATION");
+                    ModPotionUtils.MAX_INGREDIENT_COUNT = toInt(json.get("MAX_EFFECT_DURATION"));
 
 
             } catch (Exception e) {
                 Brewery.LOGGER.info("Error while loading config");
             }
         }
+
 
         ModPotionUtils.Ingredients.clear();
 
