@@ -119,7 +119,7 @@ public class ModPotionUtils {
 
         public static void register(Item ingredient, Potion potion, List<IngredientType> effects) {
             if (!ingredient_map.containsKey(ingredient))
-                ingredient_map.put(ingredient, new PotionIngredientMap(List.of()));
+                ingredient_map.put(ingredient, new PotionIngredientMap(new ArrayList<>()));
             
             ingredient_map.get(ingredient).put(potion, new ArrayList<>(effects));
         }
